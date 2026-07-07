@@ -15,6 +15,27 @@ body{
 }
 a{color:inherit}
 ::selection{background:rgba(57,211,83,.25)}
+
+/* ── custom cursor (desktop / fine-pointer only) ── */
+@media (pointer:fine){
+  html.cur,html.cur *{cursor:none}
+  html.cur input,html.cur textarea,html.cur select,html.cur [contenteditable]{cursor:text}
+  .cur-dot,.cur-ring{position:fixed;top:0;left:0;z-index:9998;pointer-events:none;
+    border-radius:50%;opacity:0;transition:opacity .25s ease;mix-blend-mode:screen}
+  html.cur-ready .cur-dot,html.cur-ready .cur-ring{opacity:1}
+  html.cur-hidden .cur-dot,html.cur-hidden .cur-ring,
+  html.typing .cur-dot,html.typing .cur-ring{opacity:0}
+  .cur-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--green);
+    box-shadow:0 0 10px rgba(57,211,83,.65)}
+  .cur-ring{width:30px;height:30px;margin:-15px 0 0 -15px;border:1px solid rgba(57,211,83,.42);
+    transition:width .22s ease,height .22s ease,margin .22s ease,
+      border-color .22s ease,background-color .22s ease,opacity .25s ease}
+  html.cur-hover .cur-ring{width:46px;height:46px;margin:-23px 0 0 -23px;
+    border-color:rgba(57,211,83,.8);background:rgba(57,211,83,.06)}
+  html.cur-down .cur-ring{width:22px;height:22px;margin:-11px 0 0 -11px;
+    border-color:rgba(57,211,83,.9)}
+}
+@media (prefers-reduced-motion:reduce){.cur-ring{transition:opacity .25s ease}}
 ::-webkit-scrollbar{width:11px;height:11px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:#26a64155;border-radius:8px}

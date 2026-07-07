@@ -300,3 +300,39 @@ loadGitHub();
     else print('command not found: '+parts[0]+' — type <span class="g">help</span>','m');
   });
 })();
+
+/* ---------- custom cursor: precise dot + soft trailing ring ---------- */
+(function(){
+  if(!matchMedia('(pointer:fine)').matches) return;     // mouse only
+  const root=document.documentElement;
+  const dot=document.createElement('div'); dot.className='cur-dot';
+  const ring=document.createElement('div'); ring.className='cur-ring';
+  document.body.append(dot,ring); root.classList.add('cur');
+
+  let mx=innerWidth/2,my=innerHeight/2, rx=mx,ry=my, seen=false;
+  addEventListener('mousemove',e=>{
+    mx=e.clientX; my=e.clientY;
+    dot.style.transform='translate('+mx+'px,'+my+'px)';
+    if(!seen){seen=true; rx=mx; ry=my; root.classList.add('cur-ready');}
+  },{passive:true});
+
+  addEventListener('mousedown',()=>root.classList.add('cur-down'));
+  addEventListener('mouseup',()=>root.classList.remove('cur-down'));
+  addEventListener('mouseleave',()=>root.classList.add('cur-hidden'));
+  addEventListener('mouseenter',()=>root.classList.remove('cur-hidden'));
+
+  const clickSel='a,button,summary,label,[role=button],input[type=submit],'
+    +'input[type=button],.tile,.chip,.pill,.btn';
+  const typeSel='input:not([type=submit]):not([type=button]),textarea,select,[contenteditable]';
+  addEventListener('mouseover',e=>{
+    const t=e.target;
+    root.classList.toggle('cur-hover',!!(t.closest&&t.closest(clickSel)));
+    root.classList.toggle('typing',!!(t.closest&&t.closest(typeSel)));
+  });
+
+  (function loop(){
+    rx+=(mx-rx)*0.18; ry+=(my-ry)*0.18;
+    ring.style.transform='translate('+rx+'px,'+ry+'px)';
+    requestAnimationFrame(loop);
+  })();
+})();
