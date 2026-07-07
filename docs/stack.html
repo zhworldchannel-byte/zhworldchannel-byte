@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stack · Zain Hamid</title>
+<meta name="description" content="Zain Hamid's tech stack — languages, frameworks, cloud & tools." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="brand"><span class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+    <span><b>root@zainhamid</b>:~/stack</span></div>
+  <div class="links" id="nav">
+    <a href="index.html">home</a><a href="about.html">about</a><a href="projects.html">projects</a>
+    <a href="robotics.html">robotics</a><a href="stack.html" class="active">stack</a><a href="terminal.html">terminal</a><a href="contact.html">contact</a>
+  </div>
+  <span class="opp"><i class="pulse"></i>open to opportunities</span>
+  <button class="burger" aria-label="menu">≡</button>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero reveal" style="padding-top:40px">
+    <div class="prompt"><b>root@zainhamid</b>:~# cat stack.json</div>
+    <h1 style="font-size:clamp(34px,6vw,64px)">Tech Stack</h1>
+    <div class="role">the tools I ship with, categorized by tier</div>
+  </section>
+
+  <!-- ICON WALL -->
+  <div class="center reveal" style="margin-top:24px">
+    <img src="https://skillicons.dev/icons?i=ts,js,python,java,react,tailwind,firebase,xcode,git,github,vscode,figma&theme=dark&perline=12" alt="stack" style="max-width:100%" />
+  </div>
+
+  <!-- SKILL BARS -->
+  <div class="shead"><span class="hash">#</span> languages &amp; app frameworks</div>
+  <div class="grid g2">
+    <div class="card reveal" data-bar>
+      <div class="skill"><div class="top"><b>TypeScript</b><span>expert</span></div><div class="bar"><i data-w="92%"></i></div></div>
+      <div class="skill"><div class="top"><b>JavaScript</b><span>expert</span></div><div class="bar"><i data-w="90%"></i></div></div>
+      <div class="skill"><div class="top"><b>React Native</b><span>advanced</span></div><div class="bar"><i data-w="86%"></i></div></div>
+    </div>
+    <div class="card reveal" data-bar>
+      <div class="skill"><div class="top"><b>Python</b><span>advanced</span></div><div class="bar"><i data-w="82%"></i></div></div>
+      <div class="skill"><div class="top"><b>Java</b><span>advanced</span></div><div class="bar"><i data-w="80%"></i></div></div>
+      <div class="skill"><div class="top"><b>TailwindCSS</b><span>advanced</span></div><div class="bar"><i data-w="85%"></i></div></div>
+    </div>
+  </div>
+
+  <div class="shead"><span class="hash">#</span> cloud, backend &amp; dev suites</div>
+  <div class="grid g2">
+    <div class="card reveal" data-bar>
+      <div class="skill"><div class="top"><b>Firebase</b><span>advanced</span></div><div class="bar"><i data-w="84%"></i></div></div>
+      <div class="skill"><div class="top"><b>Git &amp; GitHub</b><span>advanced</span></div><div class="bar"><i data-w="88%"></i></div></div>
+      <div class="skill"><div class="top"><b>Cursor AI</b><span>native</span></div><div class="bar"><i data-w="95%"></i></div></div>
+    </div>
+    <div class="card reveal" data-bar>
+      <div class="skill"><div class="top"><b>Xcode</b><span>proficient</span></div><div class="bar"><i data-w="75%"></i></div></div>
+      <div class="skill"><div class="top"><b>Autodesk Fusion</b><span>proficient</span></div><div class="bar"><i data-w="72%"></i></div></div>
+      <div class="skill"><div class="top"><b>Figma</b><span>proficient</span></div><div class="bar"><i data-w="78%"></i></div></div>
+    </div>
+  </div>
+
+  <!-- CATEGORIZED CHIPS + DONUT -->
+  <div class="shead"><span class="hash">#</span> inventory &amp; live language mix</div>
+  <div class="grid g2">
+    <div class="card reveal">
+      <b style="color:var(--cyan);font-size:13px">EVERYTHING I USE</b>
+      <div class="chips" style="margin-top:12px">
+        <span class="chip"><span class="d" style="background:#3178c6"></span>TypeScript</span>
+        <span class="chip"><span class="d" style="background:#f1e05a"></span>JavaScript</span>
+        <span class="chip"><span class="d" style="background:#3572A5"></span>Python</span>
+        <span class="chip"><span class="d" style="background:#b07219"></span>Java</span>
+        <span class="chip"><span class="d" style="background:#61dafb"></span>React Native</span>
+        <span class="chip"><span class="d" style="background:#38bdf8"></span>TailwindCSS</span>
+        <span class="chip"><span class="d" style="background:#ffca28"></span>Firebase</span>
+        <span class="chip"><span class="d" style="background:#1477ff"></span>Xcode</span>
+        <span class="chip"><span class="d" style="background:#f57c00"></span>Autodesk Fusion</span>
+        <span class="chip"><span class="d" style="background:#f05032"></span>Git</span>
+        <span class="chip"><span class="d" style="background:#39d353"></span>Cursor AI</span>
+      </div>
+    </div>
+    <div class="card reveal">
+      <b style="color:var(--cyan);font-size:13px">LIVE LANGUAGE MIX</b>
+      <div class="donut-wrap" style="margin-top:14px">
+        <div class="donut" id="donut"><div class="mid">top<br>langs</div></div>
+        <div class="legend" id="legend"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider reveal"></div>
+  <section class="center reveal">
+    <h3 style="color:#fff;margin-bottom:6px">Need any of these on your team?</h3>
+    <p style="color:var(--muted);margin-bottom:18px">I'm open to opportunities.</p>
+    <a class="btn solid" href="contact.html">✉ get in touch</a>
+  </section>
+
+  <footer>
+    <div class="fnav"><a href="index.html">home</a><a href="about.html">about</a><a href="projects.html">projects</a>
+      <a href="robotics.html">robotics</a><a href="stack.html">stack</a><a href="terminal.html">terminal</a><a href="contact.html">contact</a></div>
+    <div>© <span id="yr"></span> Zain Hamid · built in ~/terminal · dark-mode always</div>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects · Zain Hamid</title>
+<meta name="description" content="Projects by Zain Hamid — VaultFlow, mobile app engineering, and FTC robotics." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="brand"><span class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+    <span><b>root@zainhamid</b>:~/projects</span></div>
+  <div class="links" id="nav">
+    <a href="index.html">home</a><a href="about.html">about</a><a href="projects.html" class="active">projects</a>
+    <a href="robotics.html">robotics</a><a href="stack.html">stack</a><a href="terminal.html">terminal</a><a href="contact.html">contact</a>
+  </div>
+  <span class="opp"><i class="pulse"></i>open to opportunities</span>
+  <button class="burger" aria-label="menu">≡</button>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero reveal" style="padding-top:40px">
+    <div class="prompt"><b>root@zainhamid</b>:~# ls ./projects</div>
+    <h1 style="font-size:clamp(34px,6vw,64px)">Projects</h1>
+    <div class="role">case studies across product, engineering &amp; hardware</div>
+  </section>
+
+  <!-- VAULTFLOW CASE STUDY -->
+  <div class="shead"><span class="hash">#</span> 01 · flagship venture</div>
+  <div class="card reveal">
+    <h3>◉ VaultFlow — Cloud Portal <span class="tag ml">TypeScript</span> <span class="tag">LIVE</span></h3>
+    <p>VaultFlow is a <b style="color:var(--green)">cloud ecosystem</b> that tracks document lifecycles and subscription
+      renewals, flagging every expiry <b style="color:var(--green)">before</b> it lapses. It turns scattered renewal
+      dates and expiring documents into one calm, intelligent dashboard.</p>
+    <div class="grid g2" style="margin-top:8px">
+      <div><b style="color:var(--cyan);font-size:13px">CORE CAPABILITIES</b>
+        <ul class="flist">
+          <li>document lifecycle tracking engine</li>
+          <li>pre-expiration renewal alerts</li>
+          <li>subscription intelligence dashboard</li>
+          <li>secure multi-tenant vaults</li>
+        </ul></div>
+      <div><b style="color:var(--cyan);font-size:13px">MY ROLE</b>
+        <ul class="flist">
+          <li>Founder &amp; CEO — product vision &amp; strategy</li>
+          <li>full-stack architecture &amp; UI</li>
+          <li>cloud backend &amp; data modeling</li>
+          <li>growth, outreach &amp; scaling loops</li>
+        </ul></div>
+    </div>
+    <div class="chips" style="margin:14px 0">
+      <span class="chip"><span class="d" style="background:#3178c6"></span>TypeScript</span>
+      <span class="chip"><span class="d" style="background:#61dafb"></span>React Native</span>
+      <span class="chip"><span class="d" style="background:#ffca28"></span>Firebase</span>
+      <span class="chip"><span class="d" style="background:#38bdf8"></span>TailwindCSS</span>
+    </div>
+    <div class="btns"><a class="btn solid" href="https://vault-flow.space" target="_blank">visit vault-flow.space →</a></div>
+  </div>
+
+  <!-- MOBILE -->
+  <div class="shead"><span class="hash">#</span> 02 · mobile app engineering</div>
+  <div class="card reveal">
+    <h3>💾 Mobile App Engineering <span class="tag ml">React Native</span></h3>
+    <p>Building modern cross-platform mobile solutions that feel native on both iOS and Android — with an emphasis on
+      architecture that stays clean as it scales.</p>
+    <ul class="flist">
+      <li>clean, reactive view-models that separate UI from logic</li>
+      <li>low-latency state management for buttery interactions</li>
+      <li>reusable component systems &amp; design tokens</li>
+      <li>offline-first data flows &amp; optimistic updates</li>
+    </ul>
+    <div class="chips" style="margin-top:12px">
+      <span class="chip">React Native</span><span class="chip">TypeScript</span><span class="chip">Xcode</span><span class="chip">Firebase</span>
+    </div>
+  </div>
+
+  <!-- ROBOTICS SPLIT -->
+  <div class="shead"><span class="hash">#</span> 03 · FTC robotics</div>
+  <div class="grid g2">
+    <div class="card reveal"><h3>🤖 Control Engineering <span class="tag ml">Java</span></h3>
+      <p>The technical brains of the robot.</p>
+      <ul class="flist"><li>multi-motor chassis control</li><li>sensor mapping arrays</li><li>Java autonomous routines</li><li>tuning for precision &amp; repeatability</li></ul></div>
+    <div class="card reveal"><h3>📈 Business &amp; Outreach <span class="tag ml">Ops</span></h3>
+      <p>The engine that funds &amp; grows the team.</p>
+      <ul class="flist"><li>sponsorship formulation &amp; pitching</li><li>documentation pipelines</li><li>community outreach marketing</li><li>brand &amp; presentation design</li></ul></div>
+  </div>
+  <div class="center reveal" style="margin-top:16px"><a class="btn" href="robotics.html">full robotics breakdown →</a></div>
+
+  <!-- LIVE REPOS -->
+  <div class="shead"><span class="hash">#</span> 04 · live from github</div>
+  <div class="grid g3" id="liverepos">
+    <div class="card center" style="grid-column:1/-1;color:var(--muted)">loading repositories…</div>
+  </div>
+
+  <div class="divider reveal"></div>
+  <section class="center reveal">
+    <h3 style="color:#fff;margin-bottom:6px">Have a project in mind?</h3>
+    <p style="color:var(--muted);margin-bottom:18px">I'm open to collaborations &amp; freelance builds.</p>
+    <a class="btn solid" href="contact.html">✉ let's build it</a>
+  </section>
+
+  <footer>
+    <div class="fnav"><a href="index.html">home</a><a href="about.html">about</a><a href="projects.html">projects</a>
+      <a href="robotics.html">robotics</a><a href="stack.html">stack</a><a href="terminal.html">terminal</a><a href="contact.html">contact</a></div>
+    <div>© <span id="yr"></span> Zain Hamid · built in ~/terminal · dark-mode always</div>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
