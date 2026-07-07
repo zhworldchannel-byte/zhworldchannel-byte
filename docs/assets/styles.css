@@ -188,13 +188,18 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* interactive terminal */
-.term{background:#010409;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--glow)}
-.term .bar{display:flex;gap:7px;padding:12px 15px;background:var(--panel);border-bottom:1px solid var(--line)}
-.term .bar .t{margin-left:10px;color:var(--muted);font-size:12px}
-.term .body{padding:20px;font-size:13.5px;height:420px;overflow-y:auto}
-.term .line{white-space:pre-wrap;word-break:break-word;margin-bottom:2px}
+.term{background:#010409;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:var(--glow);scroll-margin-top:80px;display:flex;flex-direction:column}
+.term .bar{display:flex;align-items:center;gap:8px;padding:13px 16px;background:var(--panel);
+  border-bottom:1px solid var(--line);flex:0 0 auto}
+.term .bar .dot{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+.term .bar .t{margin-left:10px;color:var(--muted);font-size:12px;line-height:1}
+.term .body{padding:18px 20px;font-size:13.5px;height:clamp(300px,44vh,430px);
+  overflow-y:auto;flex:1 1 auto}
+.term .line{white-space:pre-wrap;word-break:break-word;margin-bottom:3px;line-height:1.55}
 .term .u{color:var(--cyan)}.term .g{color:var(--green)}.term .m{color:var(--muted)}.term .w{color:#fff}
-.term .inrow{display:flex;align-items:center;padding:0 20px 18px}
+.term .inrow{display:flex;align-items:center;padding:14px 20px;background:var(--panel);
+  border-top:1px solid var(--line);flex:0 0 auto}
 .term .ps{color:var(--cyan);white-space:nowrap}
 .term input{flex:1;background:transparent;border:0;outline:0;color:var(--green);
   font-family:inherit;font-size:13.5px;margin-left:8px}
