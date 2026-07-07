@@ -56,6 +56,11 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .nav .opp{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--green);
   border:1px solid var(--line);border-radius:999px;padding:5px 10px;background:rgba(57,211,83,.06);
   white-space:nowrap;flex:0 0 auto}
+.nav .clock{display:inline-flex;align-items:center;gap:8px;font-size:12px;white-space:nowrap;
+  flex:0 0 auto;font-variant-numeric:tabular-nums;letter-spacing:.3px}
+.nav .clock .d{color:var(--muted)}
+.nav .clock .sep{color:var(--line);color:rgba(57,211,83,.4)}
+.nav .clock .t{color:var(--green)}
 .nav .burger{display:none;background:none;border:1px solid var(--line);color:var(--green);
   border-radius:8px;padding:6px 10px;font-size:16px;cursor:pointer}
 .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);
@@ -259,4 +264,5 @@ footer .fnav a:hover{color:var(--green)}
   .nav .links a{padding:12px}
   .nav .burger{display:block}
   .nav .opp{display:none}
+  .nav .clock{display:none}
 }

@@ -49,6 +49,18 @@ const PAGES = [
   l.href='data:image/svg+xml,'+svg; document.head.appendChild(l);
 })();
 
+/* ---------- live date + time in the nav (borderless) ---------- */
+(function(){
+  const nav=document.querySelector('.nav'); if(!nav) return;
+  const c=document.createElement('div'); c.className='clock';
+  nav.insertBefore(c, nav.querySelector('.opp')||nav.querySelector('.burger'));
+  const upd=()=>{const d=new Date();
+    const date=d.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
+    const time=d.toLocaleTimeString(undefined,{hour12:false});
+    c.innerHTML='<span class="d">'+date+'</span><span class="sep">·</span><span class="t">'+time+'</span>';};
+  upd(); setInterval(upd,1000);
+})();
+
 /* ---------- back-to-top button ---------- */
 (function(){
   const btn=document.createElement('a'); btn.className='totop'; btn.href='#'; btn.innerHTML='↑';
