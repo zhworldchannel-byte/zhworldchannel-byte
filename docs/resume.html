@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Résumé · Zain Hamid</title>
+<meta name="description" content="Résumé — Zain Hamid, Youth Developer & Founder/CEO of VaultFlow." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<style>
+@media print{
+  #matrix,.nav,.burger,.opp,footer .fnav,.noprint{display:none!important}
+  body::before{display:none}
+  body{background:#fff;color:#111}
+  .card{border:1px solid #ddd;background:#fff!important}
+  .card h3,.tl h4,.legend b{color:#111}
+  .card p,.tl p,.flist li,.stat .lbl{color:#333}
+}
+</style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="brand"><span class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+    <span><b>root@zainhamid</b>:~/resume</span></div>
+  <div class="links"></div>
+  <span class="opp"><i class="pulse"></i>open to opportunities</span>
+  <button class="burger" aria-label="menu">≡</button>
+</nav>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <section class="hero reveal" style="padding-top:40px">
+    <div class="ring"><img class="avatar" src="assets/zain.jpg" alt="Zain Hamid"
+      onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar',style:'display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:800;color:#39d353',textContent:'ZH'}))" /></div>
+    <div class="prompt" style="margin-top:20px"><b>root@zainhamid</b>:~# cat resume.md</div>
+    <h1 style="font-size:clamp(34px,6vw,64px)">Zain Hamid</h1>
+    <div class="role">Youth Developer · Founder &amp; CEO of VaultFlow</div>
+    <div class="btns c noprint" style="margin-top:22px">
+      <button class="btn solid" onclick="window.print()">⤓ save as PDF</button>
+      <a class="btn" href="contact.html">✉ contact</a>
+    </div>
+  </section>
+
+  <!-- INFO + PROFILE -->
+  <div class="shead"><span class="hash">#</span> info</div>
+  <div class="grid g2">
+    <div class="card reveal"><h3>🪪 Personal</h3>
+      <ul class="flist">
+        <li>Age: <b style="color:#fff">13</b> &nbsp;·&nbsp; born 2012-09-29</li>
+        <li>School: <b style="color:#fff">Timbercrest Middle School</b></li>
+        <li>Grade: <b style="color:#fff">7</b></li>
+        <li>Expected graduation: <b style="color:#fff">2031</b></li>
+        <li>Status: <b style="color:var(--green)">open to opportunities</b></li>
+      </ul>
+    </div>
+    <div class="card reveal"><h3>👤 Profile</h3>
+      <p>I'm 13 with hands-on experience building a wide range of apps and websites. My projects include games as well as
+      practical, user-focused applications designed to solve real problems. Through them I've developed strong skills in
+      modern, <b style="color:var(--green)">AI-assisted development</b> workflows to efficiently plan, build and improve
+      software — plus a growing understanding of how <b style="color:var(--green)">backend systems</b> work: connecting to
+      data, authentication, and core app functionality.</p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="shead"><span class="hash">#</span> skills</div>
+  <div class="card reveal">
+    <div class="chips">
+      <span class="chip"><span class="d" style="background:#39d353"></span>Vibe Coding</span>
+      <span class="chip"><span class="d" style="background:#3572A5"></span>Python Coding</span>
+      <span class="chip"><span class="d" style="background:#3178c6"></span>Software Development</span>
+      <span class="chip"><span class="d" style="background:#22d3ee"></span>AI-Based Tools</span>
+      <span class="chip"><span class="d" style="background:#f57c00"></span>Marketing</span>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="shead"><span class="hash">#</span> experience</div>
+  <div class="card reveal">
+    <div class="timeline">
+      <div class="tl"><div class="yr">NOW</div><h4>Founder &amp; CEO — VaultFlow</h4>
+        <p>Building &amp; running a cloud app that tracks important documents' expiry dates. Synced across iOS &amp; web with
+        secure sign-in, Google sign-in and 2-factor authentication. Built with Cursor AI.</p></div>
+      <div class="tl"><div class="yr">SHIPPED</div><h4>Independent App &amp; Game Developer</h4>
+        <p>Published iOS games to the Apple App Store and released web-based games &amp; sites — learning coding, publishing,
+        and backend integration end-to-end.</p></div>
+      <div class="tl"><div class="yr">BUSINESS</div><h4>Founder — Digital Delights</h4>
+        <p>Built an in-school game, social &amp; proxy hub — my first business to turn a profit.</p></div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="shead"><span class="hash">#</span> projects</div>
+  <div class="grid g2">
+    <div class="card reveal"><h3>🌐 Zain's World <span class="tag ml">Wix</span></h3>
+      <ul class="flist"><li>first-ever project</li><li>a blog site made to learn how to build a website</li></ul></div>
+    <div class="card reveal"><h3>🎮 Crazy Stack <span class="tag ml">iOS</span></h3>
+      <ul class="flist"><li>first game/app on the Apple App Store</li><li>a simple stack game to learn coding &amp; publishing</li><li>made using Cursor AI</li></ul></div>
+    <div class="card reveal"><h3>⚔ Battle Arena <span class="tag ml">iOS</span></h3>
+      <ul class="flist"><li>more advanced App Store game</li><li>online PVP with a Firebase backend for real-time play</li></ul></div>
+    <div class="card reveal"><h3>🔫 Arena Shooter <span class="tag ml">Web</span></h3>
+      <ul class="flist"><li>a wave-based browser game</li><li>single HTML file — explored the trade-offs of running without a backend</li></ul></div>
+    <div class="card reveal"><h3>◉ Vault Flow <span class="tag ml">iOS + Web</span></h3>
+      <ul class="flist"><li>tracks your important documents' expiry dates</li><li>synced on iOS &amp; web · secure + Google sign-in · 2FA</li><li>made using Cursor AI</li></ul></div>
+    <div class="card reveal"><h3>🏛 Business Dominion <span class="tag ml">Web</span></h3>
+      <ul class="flist"><li>advanced business simulator</li><li>secure backend account system</li><li>built to test the limits of Google's latest LLMs</li></ul></div>
+    <div class="card reveal"><h3>✨ Digital Delights <span class="tag ml">Web</span></h3>
+      <ul class="flist"><li>in-school game, social &amp; proxy hub</li><li>first business that made a profit</li></ul></div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="shead"><span class="hash">#</span> contact</div>
+  <div class="card reveal">
+    <ul class="flist">
+      <li>Primary email: <b style="color:var(--green)">zainhamidzia@gmail.com</b></li>
+      <li>Secondary email: <b style="color:var(--green)">zhworldchannel@gmail.com</b></li>
+      <li>GitHub: <b style="color:var(--green)">@zhworldchannel-byte</b> · LinkedIn: Zain Hamid · Instagram: @zainy_2012</li>
+    </ul>
+    <div class="btns noprint" style="margin-top:8px">
+      <button class="btn solid" onclick="window.print()">⤓ save as PDF</button>
+      <a class="btn" href="mailto:zainhamidzia@gmail.com">✉ email me</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fnav"></div>
+    <div>© <span id="yr"></span> Zain Hamid · built in ~/terminal · dark-mode always</div>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

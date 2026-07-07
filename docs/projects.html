@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects · Zain Hamid</title>
+<meta name="description" content="Projects by Zain Hamid — VaultFlow, Digital Delights, Zain's World & more." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="brand"><span class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+    <span><b>root@zainhamid</b>:~/projects</span></div>
+  <div class="links"></div>
+  <span class="opp"><i class="pulse"></i>open to opportunities</span>
+  <button class="burger" aria-label="menu">≡</button>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero reveal" style="padding-top:40px">
+    <div class="prompt"><b>root@zainhamid</b>:~# ls ./projects</div>
+    <h1 style="font-size:clamp(34px,6vw,64px)">Projects</h1>
+    <div class="role">apps &amp; websites that solve real problems · <a href="games.html" style="color:var(--green)">games live here →</a></div>
+  </section>
+
+  <!-- VAULTFLOW CASE STUDY -->
+  <div class="shead"><span class="hash">#</span> 01 · flagship venture</div>
+  <div class="card reveal">
+    <h3>◉ VaultFlow <span class="tag ml">iOS + Web</span> <span class="tag">LIVE</span></h3>
+    <p>VaultFlow is a <b style="color:var(--green)">cloud app that tracks your important documents' expiry dates</b> —
+      so nothing critical ever lapses. It's synced across iOS and the web with a real, secure account system.</p>
+    <div class="grid g2" style="margin-top:8px">
+      <div><b style="color:var(--cyan);font-size:13px">FEATURES</b>
+        <ul class="flist">
+          <li>document expiry &amp; renewal tracking</li>
+          <li>synced across iOS + web</li>
+          <li>secure sign-in + Google sign-in</li>
+          <li>2-factor authentication</li>
+        </ul></div>
+      <div><b style="color:var(--cyan);font-size:13px">MY ROLE</b>
+        <ul class="flist">
+          <li>Founder &amp; CEO — product &amp; vision</li>
+          <li>full build with Cursor AI</li>
+          <li>backend: data, auth &amp; sync</li>
+          <li>growth &amp; outreach</li>
+        </ul></div>
+    </div>
+    <div class="chips" style="margin:14px 0">
+      <span class="chip"><span class="d" style="background:#61dafb"></span>iOS</span>
+      <span class="chip"><span class="d" style="background:#3178c6"></span>Web</span>
+      <span class="chip"><span class="d" style="background:#ffca28"></span>Firebase</span>
+      <span class="chip"><span class="d" style="background:#39d353"></span>Cursor AI</span>
+    </div>
+    <div class="btns"><a class="btn solid" href="https://vault-flow.space" target="_blank">visit vault-flow.space →</a></div>
+  </div>
+
+  <!-- DIGITAL DELIGHTS -->
+  <div class="shead"><span class="hash">#</span> 02 · first profitable business</div>
+  <div class="card reveal">
+    <h3>✨ Digital Delights <span class="tag ml">Web</span> <span class="tag">💰 profit</span></h3>
+    <p>An in-school <b style="color:var(--green)">game, social &amp; proxy hub</b> — and my first business to actually turn
+      a profit. A lesson in building something people want and running it like a real product.</p>
+    <ul class="flist">
+      <li>games + social feed + proxy hub in one place</li>
+      <li>real users from my school</li>
+      <li>first revenue-generating venture</li>
+    </ul>
+    <div class="chips"><span class="chip">Web</span><span class="chip">Product</span><span class="chip">Marketing</span></div>
+  </div>
+
+  <!-- ZAIN'S WORLD -->
+  <div class="shead"><span class="hash">#</span> 03 · where it started</div>
+  <div class="card reveal">
+    <h3>🌐 Zain's World <span class="tag ml">Wix</span></h3>
+    <p>My <b style="color:var(--green)">first-ever project</b> — a blog site built to learn the end-to-end process of
+      making and shipping a website. The spark that started everything.</p>
+    <div class="chips"><span class="chip">Wix</span><span class="chip">Blog</span><span class="chip">First build</span></div>
+  </div>
+
+  <!-- MORE -->
+  <div class="shead"><span class="hash">#</span> 04 · more builds</div>
+  <div class="grid g3">
+    <a class="card reveal" href="games.html" style="text-decoration:none"><h3>🎮 Games →</h3>
+      <p>Crazy Stack · Battle Arena · Arena Shooter · Business Dominion</p></a>
+    <a class="card reveal" href="robotics.html" style="text-decoration:none"><h3>🤖 FTC Robotics →</h3>
+      <p>Control engineering + the business of a competitive team.</p></a>
+    <a class="card reveal" href="resume.html" style="text-decoration:none"><h3>📄 Full Résumé →</h3>
+      <p>Every project, skill &amp; detail in one place.</p></a>
+  </div>
+
+  <!-- LIVE REPOS -->
+  <div class="shead"><span class="hash">#</span> 05 · live from github</div>
+  <div class="grid g3" id="liverepos">
+    <div class="card center" style="grid-column:1/-1;color:var(--muted)">loading repositories…</div>
+  </div>
+
+  <div class="divider reveal"></div>
+  <section class="center reveal">
+    <h3 style="color:#fff;margin-bottom:6px">Have a project in mind?</h3>
+    <p style="color:var(--muted);margin-bottom:18px">I'm open to collaborations &amp; freelance builds.</p>
+    <a class="btn solid" href="contact.html">✉ let's build it</a>
+  </section>
+
+  <footer>
+    <div class="fnav"></div>
+    <div>© <span id="yr"></span> Zain Hamid · built in ~/terminal · dark-mode always</div>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

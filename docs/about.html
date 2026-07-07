@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About · Zain Hamid</title>
+<meta name="description" content="About Zain Hamid — founder, app developer, software engineer & roboticist." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="brand"><span class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+    <span><b>root@zainhamid</b>:~/about</span></div>
+  <div class="links" id="nav">
+    <a href="index.html">home</a><a href="about.html" class="active">about</a><a href="projects.html">projects</a>
+    <a href="robotics.html">robotics</a><a href="stack.html">stack</a><a href="terminal.html">terminal</a><a href="contact.html">contact</a>
+  </div>
+  <span class="opp"><i class="pulse"></i>open to opportunities</span>
+  <button class="burger" aria-label="menu">≡</button>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="ring"><img class="avatar" src="assets/zain.jpg" alt="Zain Hamid"
+      onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar',style:'display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:800;color:#39d353',textContent:'ZH'}))" /></div>
+    <div class="prompt" style="margin-top:20px"><b>root@zainhamid</b>:~# cat about.md</div>
+    <h1 style="font-size:clamp(32px,6vw,60px)">whoami</h1>
+    <div class="type"><span data-type='["a founder who codes","an engineer who ships","a roboticist who documents","always learning · always building"]'></span><span class="cursor">&nbsp;</span></div>
+  </section>
+
+  <!-- BIO -->
+  <div class="shead"><span class="hash">#</span> profile</div>
+  <div class="grid g2">
+    <div class="card reveal"><h3>👤 The short version</h3>
+      <p>I'm <b style="color:#fff">Zain Hamid</b> — a builder at the intersection of <b style="color:var(--green)">product, engineering and hardware</b>. As Founder &amp; CEO of <b style="color:var(--green)">VaultFlow</b>, I'm building a cloud ecosystem that makes document &amp; subscription management effortless. I also lead the control-engineering and business operations of a competitive <b style="color:var(--green)">FIRST Tech Challenge</b> robotics team.</p>
+      <p>I care about clean architecture, calm interfaces, and shipping things people actually use.</p>
+    </div>
+    <div class="card reveal"><h3>⚙ How I operate</h3>
+      <ul class="flist">
+        <li>ship small, ship often — momentum compounds</li>
+        <li>clean state management &gt; clever state management</li>
+        <li>a robot that documents itself wins sponsors</li>
+        <li>the best UI is the one you never notice</li>
+        <li>dark mode is not a preference — it's a lifestyle</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- OPEN TO OPPORTUNITIES -->
+  <div class="shead"><span class="hash">#</span> open to opportunities</div>
+  <section class="opp-banner reveal">
+    <div>
+      <div class="big"><em>●</em> I'm currently <em>open</em> to:</div>
+      <div class="sub">software / app-dev internships · freelance app builds · open-source collaborations · FTC sponsorships &amp; mentorship · founder / startup conversations</div>
+    </div>
+    <a class="btn solid" href="contact.html">reach out →</a>
+  </section>
+
+  <!-- JOURNEY TIMELINE -->
+  <div class="shead"><span class="hash">#</span> journey.log</div>
+  <div class="card reveal">
+    <div class="timeline">
+      <div class="tl"><div class="yr">NOW</div><h4>Founder &amp; CEO — VaultFlow</h4>
+        <p>Designing &amp; shipping a cloud ecosystem for document lifecycle + subscription renewal intelligence.</p></div>
+      <div class="tl"><div class="yr">ONGOING</div><h4>FTC Robotics — Control &amp; Business Lead</h4>
+        <p>Multi-motor chassis control, Java autonomous routines, plus sponsorship, documentation &amp; outreach strategy.</p></div>
+      <div class="tl"><div class="yr">ALWAYS</div><h4>Full-Stack App Developer</h4>
+        <p>Building cross-platform mobile &amp; web products with React Native, TypeScript and Firebase.</p></div>
+      <div class="tl"><div class="yr">DAILY</div><h4>Learning in public</h4>
+        <p>Living in Cursor AI, dark mode always, iterating on real products and sharing the build.</p></div>
+    </div>
+  </div>
+
+  <!-- VALUES / CURRENTLY -->
+  <div class="shead"><span class="hash">#</span> currently</div>
+  <div class="grid g3">
+    <div class="card reveal"><h3>📚 Learning</h3><p>Advanced state architecture, cloud scaling patterns, and control theory for robotics.</p></div>
+    <div class="card reveal"><h3>🛠 Building</h3><p>VaultFlow features, mobile experiences, and autonomous routines for competition season.</p></div>
+    <div class="card reveal"><h3>🎯 Chasing</h3><p>Real users, cleaner code, stronger sponsorships, and interesting people to build with.</p></div>
+  </div>
+
+  <!-- FUN FACTS -->
+  <div class="shead"><span class="hash">#</span> fun facts</div>
+  <div class="card reveal">
+    <ul class="flist">
+      <li>my editor is <b style="color:var(--green)">Cursor AI</b> and my theme is permanently dark</li>
+      <li>I think documentation is a growth strategy, not a chore</li>
+      <li>I like problems that live at the border of software and the physical world</li>
+      <li>coffee-driven development is real</li>
+    </ul>
+  </div>
+
+  <div class="divider reveal"></div>
+  <section class="center reveal">
+    <h3 style="color:#fff;margin-bottom:6px">Want to work together or just talk shop?</h3>
+    <p style="color:var(--muted);margin-bottom:18px">I'm always up for a good build.</p>
+    <div class="btns c"><a class="btn solid" href="contact.html">✉ contact me</a><a class="btn" href="projects.html">see my projects</a></div>
+  </section>
+
+  <footer>
+    <div class="fnav"><a href="index.html">home</a><a href="about.html">about</a><a href="projects.html">projects</a>
+      <a href="robotics.html">robotics</a><a href="stack.html">stack</a><a href="terminal.html">terminal</a><a href="contact.html">contact</a></div>
+    <div>© <span id="yr"></span> Zain Hamid · built in ~/terminal · dark-mode always</div>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
