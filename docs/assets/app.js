@@ -156,10 +156,141 @@ loadGitHub();
   const quotes=['ship small, ship often — momentum compounds.','clean state management > clever state management.',
     'the best UI is the one you never notice.','dark mode is not a preference — it\'s a lifestyle.',
     'a project that documents itself wins.','build in public, learn in public.'];
-  const jokes=['why do programmers prefer dark mode? because light attracts bugs. 🐛',
-    'there are 10 kinds of people: those who understand binary and those who don\'t.',
-    'it works on my machine ¯\\_(ツ)_/¯','a SQL query walks into a bar, approaches two tables and asks: may I join you?'];
   const rand=a=>a[Math.floor(Math.random()*a.length)];
+
+  /* ── jokes: curated set + combinatorial generators (19,000+ distinct) ── */
+  const jokes=[
+    "why do programmers prefer dark mode? because light attracts bugs. 🐛",
+    "it works on my machine ¯\\_(ツ)_/¯",
+    "a SQL query walks into a bar, approaches two tables and asks: may I join you?",
+    "why do Java developers wear glasses? because they don't C#.",
+    "I told my computer I needed a break, and now it won't stop sending me KitKats.",
+    "there are only two hard things in computer science: cache invalidation, naming things, and off-by-one errors.",
+    "why did the developer go broke? because he used up all his cache.",
+    "a programmer's wife says: go to the store and get a loaf of bread, if they have eggs get a dozen. he came back with 12 loaves of bread.",
+    "why do programmers hate nature? it has too many bugs and no documentation.",
+    "how do you comfort a JavaScript bug? you console it.",
+    "why was the function sad after the party? it didn't get called back.",
+    "a byte walks into a bar looking miserable. the bartender asks: what's wrong? it says: parity error. the bartender says: yeah, I thought you looked a bit off.",
+    "why did the programmer quit his job? he didn't get arrays.",
+    "what's a programmer's favorite hangout spot? the Foo Bar.",
+    "why do Python devs prefer snakes? because they don't like to deal with C.",
+    "I would tell you a UDP joke, but you might not get it.",
+    "I'd tell you a TCP joke, but I'd have to keep repeating it until you got it.",
+    "why don't bachelors like Git? because they're afraid to commit.",
+    "there's no place like 127.0.0.1.",
+    "hardware: the part of the computer you can kick. software: the part you can only swear at.",
+    "why did the private variable break up with the public one? it needed some space.",
+    "why was the JavaScript developer sad? because he didn't know how to null his feelings.",
+    "a QA engineer walks into a bar. orders a beer. orders 0 beers. orders 999999999 beers. orders a lizard. orders -1 beers. orders a sfdeljknesv.",
+    "to understand recursion, you must first understand recursion.",
+    "why do programmers always mix up Halloween and Christmas? because Oct 31 == Dec 25.",
+    "!false — it's funny because it's true.",
+    "why did the developer stay calm? because he had good exception handling.",
+    "a programmer is heading to the store. his partner says: get milk. he never returns. — array index out of bounds.",
+    "how many programmers does it take to fix a lightbulb? none, it's a hardware problem.",
+    "why was the developer unhappy at their job? they wanted arrays.",
+    "the best thing about a boolean is even if you're wrong, you're only off by a bit.",
+    "why did the coder get kicked out of school? because he kept breaking the class.",
+    "I've got a really good UDP joke to tell you, but I don't know if you'll get it.",
+    "algorithm: word used by programmers when they don't want to explain what they did.",
+    "debugging: being the detective in a crime movie where you're also the murderer.",
+    "there are 10 types of people: those who understand binary and those who don't.",
+    "there are 10 types of people: those who understand binary, those who don't, and those who didn't expect a base-3 joke.",
+    "why did the programmer dislike the countryside? too many bugs, and the WiFi's terrible.",
+    "old programmers never die, they just decompile.",
+    "why do programmers prefer iOS development? because they can't handle the Android.",
+    "programming is 10% writing code and 90% understanding why it doesn't work.",
+    "a good programmer looks both ways before crossing a one-way street.",
+    "my code doesn't have bugs, it develops random unexpected features.",
+    "when your code works on the first try. — nobody has ever said this.",
+    "git commit -m 'minor changes' (changed 4,000 lines across 87 files).",
+    "the '5-minute fix' is the most dangerous phrase in software.",
+    "99 little bugs in the code, 99 little bugs — take one down, patch it around, 127 little bugs in the code.",
+    "I don't always test my code, but when I do, I do it in production.",
+    "the code is more like guidelines than actual rules.",
+    "in order to understand recursion, see the previous joke.",
+    "why did the frontend dev break up with the backend dev? there was no connection.",
+    "CSS: the only language where you spend two hours centering a div and call it a career.",
+    "a CSS developer's favorite dance move? float: left.",
+    "'it's not a bug, it's an undocumented feature' — every developer ever.",
+    "why was the null pointer so calm? it had nothing to reference.",
+    "regex walks into a bar and immediately regrets everything. .*",
+    "why did the DevOps engineer sleep on the floor? no stack.",
+    "I finally understand why my code is slow — it has commitment issues, it never optimizes.",
+    "why did the developer break up over text? too many unresolved merge conflicts.",
+    "a programmer's dream vacation? somewhere with no internet, so the tickets stop.",
+    "'have you tried turning it off and on again?' — the most powerful spell in IT.",
+    "why did the AI cross the road? it was trained on chickens.",
+    "why don't programmers like to go outside? the sun causes too much glare on the monitor.",
+    "the two states of every programmer: 'I am a god' and 'I have no idea what I'm doing.'"
+  ];
+
+  const JL=['JavaScript','Python','Java','C++','C','C#','Go','Rust','Ruby','PHP','TypeScript','Swift',
+    'Kotlin','Scala','Haskell','Perl','Lua','R','Dart','Elixir','Clojure','Assembly','Bash','SQL','COBOL',
+    'Fortran','Objective-C','Visual Basic','MATLAB','Julia','Erlang','F#','Groovy','Solidity','Zig','Nim',
+    'Crystal','OCaml','Prolog','Brainfuck'];
+
+  const jokeGens=[
+    ()=>{const l=rand(JL),t=[
+      l=>l+' developers never die — they just go out of scope.',
+      l=>'I\'d tell you a '+l+' joke, but I\'m afraid you wouldn\'t catch the exception.',
+      l=>'writing '+l+' at 3am is how every horror movie actually begins.',
+      l=>l+' is easy, they said. it\'ll be fun, they said. 🙃',
+      l=>'debugging '+l+' is being a detective in a crime where you\'re also the murderer.',
+      l=>'my '+l+' code doesn\'t have bugs — it has undocumented features.',
+      l=>l+' devs don\'t get lost, they just take an unhandled path.',
+      l=>'I love '+l+'. it never lets me down… it just throws me instead.',
+      l=>'ask a '+l+' dev how they are and they\'ll say "it compiles, so… fine?"',
+      l=>l+': turning coffee into stack traces since forever. ☕',
+      l=>'"just one more line of '+l+'," I said, 400 lines ago.',
+      l=>l+' semicolons: 50% syntax, 50% superstition.',
+      l=>'the '+l+' docs said "trivial." it\'s been three days.',
+      l=>'my therapist said to write my feelings down, so now I have 2,000 lines of '+l+'.',
+      l=>l+' doesn\'t have problems, only "interesting behaviors."',
+      l=>'to understand recursion, first write it in '+l+'.',
+      l=>'I renamed my '+l+' variable "temp" in 2019. it\'s now load-bearing.',
+      l=>'nobody:\nabsolutely nobody:\na '+l+' dev at 2am: "it worked five minutes ago."',
+      l=>'a '+l+' dev walks into a bar and orders 1.0000000001 beers. floating point strikes again.',
+      l=>'"I\'ll just quickly fix this '+l+' bug" — famous last words, part '+(Math.floor(Math.random()*900)+100)+'.'
+    ]; return rand(t)(l);},
+    ()=>{const a=rand(JL),b=rand(JL.filter(x=>x!==a)),v=[
+      'one of these will be deprecated before you finish reading this.',
+      'pick one and lose friends either way.',
+      'both are perfect — according to their respective cults.',
+      'the war never ends; only the survivors rotate.',
+      'choose wisely, your future self is watching through the git blame.',
+      'there\'s no right answer, only strongly held opinions.',
+      'whichever you pick, Stack Overflow will judge you.',
+      'a tale of two semicolons.',
+      'same energy, different Slack channels.',
+      'the real winner was the tech debt we made along the way.',
+      'flip a coin; the coin also has opinions.',
+      'somewhere a senior dev just sighed and doesn\'t know why.'
+    ]; return a+' vs '+b+': '+rand(v);},
+    ()=>{const g=rand(['programmers','frontend devs','backend devs','DevOps engineers','data scientists',
+      'QA testers','sysadmins','interns','senior devs','product managers','designers','AI models','hackers',
+      'gamers','startup founders','open-source maintainers','Stack Overflow lurkers','project managers']),
+      p=rand(['none — that\'s a hardware problem.','one, but only if it\'s in the ticket.',
+      'the whole team, plus a two-week sprint and a retro.','depends, is it billable?',
+      'zero, we\'ll document it as a known limitation.','three: one to change it, two to argue about the framework.',
+      'one, but they\'ll refactor the entire room first.','we don\'t — we just add a bright-mode toggle.',
+      'still loading… please wait.','one, but they\'ll insist it worked in staging.']);
+      return 'how many '+g+' does it take to change a lightbulb? '+p;},
+    ()=>{const x=rand(['understand binary','finish their side projects','trust "it works on my machine"',
+      'actually read the docs','use light mode on purpose','name variables well','write the tests first',
+      'close their browser tabs','back up the database','comment their code','leave the office before midnight']);
+      return 'there are 10 kinds of people: those who '+x+', and those who don\'t.';}
+  ];
+
+  const jokeSeen=[];
+  function tellJoke(){
+    for(let i=0;i<50;i++){
+      const j = Math.random()<0.4 ? rand(jokes) : rand(jokeGens)();
+      if(jokeSeen.indexOf(j)===-1){ jokeSeen.push(j); if(jokeSeen.length>80) jokeSeen.shift(); return j; }
+    }
+    return rand(jokes);
+  }
   const open=u=>{window.open(u,'_blank');return 'opening '+u+' ↗';};
 
   const cmds={
@@ -224,7 +355,9 @@ loadGitHub();
     motd:()=>'“build the thing you wish existed.” — welcome to zain@hub ◉',
     fortune:()=>rand(quotes),
     quote:()=>rand(quotes),
-    joke:()=>rand(jokes),
+    joke:()=>tellJoke(),
+    jokes:()=>tellJoke(),
+    dadjoke:()=>tellJoke(),
     coffee:()=>'      ( (\n       ) )\n    ........\n    |      |]   fuel acquired ☕\n    \\      /\n     `----\'',
     banner:()=>'<span class="g">'+
       ' ______     ___     _____ _   _ \n'+
