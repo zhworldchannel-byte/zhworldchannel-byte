@@ -128,7 +128,7 @@ loadGitHub();
 
   const cmds={
     help:()=>`<span class="g">── core ──</span>
-  whoami  about  profile  age  school  skills  experience  status
+  whoami  about  profile  skills  experience  status
 <span class="g">── work ──</span>
   projects  apps  games  websites  vaultflow  ftc  robotics  stack
 <span class="g">── links ──</span>
@@ -137,11 +137,8 @@ loadGitHub();
   ls  cat &lt;file&gt;  pwd  cd  uname  neofetch  date  echo  history
   motd  fortune  joke  coffee  banner  clear  sudo  exit  man &lt;cmd&gt;`,
     whoami:()=>'<span class="w">Zain Hamid</span> — Youth Developer · Founder &amp; CEO @ VaultFlow',
-    about:()=>'13-year-old developer building apps, games &amp; websites with modern AI-assisted workflows. growing backend skills (data, auth, core app functionality). founder of VaultFlow.',
+    about:()=>'developer building apps, games &amp; websites with modern AI-assisted workflows. growing backend skills (data, auth, core app functionality). founder of VaultFlow.',
     profile:()=>'I build a wide range of apps and websites — games plus practical, user-focused tools that solve real problems. strong in modern AI-assisted development and a growing understanding of backend systems: data, authentication &amp; core app functionality.',
-    age:()=>'13 years old · born 2012-09-29',
-    school:()=>'Timbercrest Middle School · Grade 7 · Class of 2031',
-    education:()=>cmds.school(),
     skills:()=>'Vibe Coding · Python Coding · Software Development · AI-assisted tooling · Marketing',
     experience:()=>'Founder &amp; CEO @ VaultFlow · shipped iOS games (App Store) · built web games &amp; sites · first profitable business: Digital Delights',
     status:()=>'<span class="g">● OPEN TO OPPORTUNITIES</span> — internships, collaborations, freelance builds &amp; sponsorships.',
@@ -176,10 +173,8 @@ loadGitHub();
     neofetch:()=>`<span class="g">      ______     zain@hub</span>
 <span class="g">     / ____/     </span>---------------
 <span class="g">    / /  __     </span>Name:    Zain Hamid
-<span class="g">   / /__/ /     </span>Age:     13 (b. 2012-09-29)
-<span class="g">   \\____/       </span>School:  Timbercrest MS · Grade 7
-                Role:    Founder &amp; CEO @ VaultFlow
-                Editor:  Cursor AI (native)
+<span class="g">   / /__/ /     </span>Role:    Founder &amp; CEO @ VaultFlow
+<span class="g">   \\____/       </span>Editor:  Cursor AI (native)
                 Langs:   TS · JS · Python · Java
                 Focus:   apps · games · robotics
                 Status:  open to opportunities`,

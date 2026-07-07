@@ -9,16 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/styles.css" />
-<style>
-@media print{
-  #matrix,.nav,.burger,.opp,footer .fnav,.noprint{display:none!important}
-  body::before{display:none}
-  body{background:#fff;color:#111}
-  .card{border:1px solid #ddd;background:#fff!important}
-  .card h3,.tl h4,.legend b{color:#111}
-  .card p,.tl p,.flist li,.stat .lbl{color:#333}
-}
-</style>
 </head>
 <body>
 <canvas id="matrix"></canvas>
@@ -40,26 +30,25 @@
     <div class="prompt" style="margin-top:20px"><b>root@zainhamid</b>:~# cat resume.md</div>
     <h1 style="font-size:clamp(34px,6vw,64px)">Zain Hamid</h1>
     <div class="role">Youth Developer · Founder &amp; CEO of VaultFlow</div>
-    <div class="btns c noprint" style="margin-top:22px">
-      <button class="btn solid" onclick="window.print()">⤓ save as PDF</button>
-      <a class="btn" href="contact.html">✉ contact</a>
+    <div class="btns c" style="margin-top:22px">
+      <a class="btn solid" href="contact.html">✉ contact</a>
+      <a class="btn" href="projects.html">▸ view projects</a>
     </div>
   </section>
 
   <!-- INFO + PROFILE -->
   <div class="shead"><span class="hash">#</span> info</div>
   <div class="grid g2">
-    <div class="card reveal"><h3>🪪 Personal</h3>
+    <div class="card reveal"><h3>🪪 Overview</h3>
       <ul class="flist">
-        <li>Age: <b style="color:#fff">13</b> &nbsp;·&nbsp; born 2012-09-29</li>
-        <li>School: <b style="color:#fff">Timbercrest Middle School</b></li>
-        <li>Grade: <b style="color:#fff">7</b></li>
-        <li>Expected graduation: <b style="color:#fff">2031</b></li>
+        <li>Role: <b style="color:#fff">Founder &amp; CEO @ VaultFlow</b></li>
+        <li>Focus: <b style="color:#fff">app, game &amp; web development</b></li>
+        <li>Toolkit: <b style="color:#fff">AI-assisted development</b></li>
         <li>Status: <b style="color:var(--green)">open to opportunities</b></li>
       </ul>
     </div>
     <div class="card reveal"><h3>👤 Profile</h3>
-      <p>I'm 13 with hands-on experience building a wide range of apps and websites. My projects include games as well as
+      <p>I'm a developer with hands-on experience building a wide range of apps and websites. My projects include games as well as
       practical, user-focused applications designed to solve real problems. Through them I've developed strong skills in
       modern, <b style="color:var(--green)">AI-assisted development</b> workflows to efficiently plan, build and improve
       software — plus a growing understanding of how <b style="color:var(--green)">backend systems</b> work: connecting to
@@ -121,9 +110,9 @@
       <li>Secondary email: <b style="color:var(--green)">zhworldchannel@gmail.com</b></li>
       <li>GitHub: <b style="color:var(--green)">@zhworldchannel-byte</b> · LinkedIn: Zain Hamid · Instagram: @zainy_2012</li>
     </ul>
-    <div class="btns noprint" style="margin-top:8px">
-      <button class="btn solid" onclick="window.print()">⤓ save as PDF</button>
-      <a class="btn" href="mailto:zainhamidzia@gmail.com">✉ email me</a>
+    <div class="btns" style="margin-top:8px">
+      <a class="btn solid" href="mailto:zainhamidzia@gmail.com">✉ email me</a>
+      <a class="btn" href="contact.html">open contact page</a>
     </div>
   </div>
 
