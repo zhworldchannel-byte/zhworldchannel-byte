@@ -1,297 +1,317 @@
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  ZAIN HAMID · GITHUB PROFILE · borderless dark-terminal dashboard          -->
-<!--  cards use bg_color=0d1117 + hide_border so they blend into GitHub's dark   -->
-<!--  canvas for a seamless, borderless look. NOTE: GitHub strips inline CSS,    -->
-<!--  so all rounding/theming is done via service params, never style="".        -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!--  ZAIN HAMID · GitHub Profile  ·  root@zainhamid:~#                     -->
+<!--  Terminal-first dark dashboard · borderless · animation-rich          -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
 
-<a href="https://vault-flow.space">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,45:0e7490,100:22d3ee&height=210&section=header&text=zain%20hamid&fontColor=e6fbff&fontSize=58&fontAlignY=38&desc=founder%20%26%20ceo%20%40%20vaultflow%20%C2%B7%20app%20developer%20%C2%B7%20software%20engineer%20%C2%B7%20roboticist&descAlignY=60&descSize=16&descColor=a5f3fc&animation=fadeIn" alt="header" />
-</a>
-
+<!-- ─────────────────────────  HERO WAVE  ───────────────────────── -->
 <div align="center">
 
-<!-- ── LIVE TERMINAL BOOT ─────────────────────────────────────────────── -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=800&color=22D3EE&background=0D111700&center=true&vCenter=true&multiline=true&repeat=true&width=850&height=130&lines=root%40zainhamid%3A~%23+whoami;founder+%26+ceo+%40+vaultflow+%C2%B7+building+the+future+of+cloud;root%40zainhamid%3A~%23+./initialize_system.sh+--boot;%E2%97%89+all+systems+operational+%C2%B7+welcome+to+my+dashboard" alt="terminal" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0e7490,100:22d3ee&height=210&section=header&text=Zain%20Hamid&fontSize=64&fontColor=e2f6ff&animation=fadeIn&fontAlignY=36&desc=Founder%20%C2%B7%20Full-Stack%20App%20Developer%20%C2%B7%20Software%20Engineer%20%C2%B7%20Roboticist&descSize=17&descAlignY=58&descAlign=50" alt="Zain Hamid" />
 
-<!-- ── LIVE STAT CARDS (blend into dark canvas) ───────────────────────── -->
-<p>
-<img src="https://img.shields.io/github/followers/zainhamid?style=for-the-badge&logo=github&logoColor=22d3ee&label=FOLLOWERS&labelColor=0d1117&color=0e7490" alt="followers" />
-<img src="https://img.shields.io/badge/ROLE-FOUNDER%20%26%20CEO-0d1117?style=for-the-badge&logo=rocket&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="role" />
-<img src="https://img.shields.io/badge/VENTURE-VAULTFLOW-0d1117?style=for-the-badge&logo=icloud&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="venture" />
-<img src="https://komarev.com/ghpvc/?username=zainhamid&style=for-the-badge&label=VISITORS&color=0e7490&labelColor=0d1117&base=1000" alt="visitors" />
-</p>
+<!-- ─────────────────────────  BOOT / TYPING  ───────────────────────── -->
+
+<a href="https://vault-flow.space">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=900&color=22D3EE&center=true&vCenter=true&width=820&height=60&lines=root%40zainhamid%3A~%23+.%2Finitialize_system.sh;%E2%9C%94+ACCESS+GRANTED+%C2%B7+decrypting+profile...;Founder+%26+CEO+%40+VaultFlow;Full-Stack+App+Developer;Software+Engineer+%26+Roboticist;%E2%97%89+SYSTEM+ONLINE+%C2%B7+welcome+to+my+terminal" alt="typing boot sequence" />
+</a>
+
+<br/>
+
+<!-- ─────────────────────────  LIVE STATUS PILLS  ───────────────────────── -->
+
+<a href="https://github.com/zainhamid?tab=followers"><img src="https://img.shields.io/github/followers/zainhamid?style=for-the-badge&logo=github&logoColor=22d3ee&label=FOLLOWERS&labelColor=020617&color=0e7490" alt="followers" /></a>
+<img src="https://komarev.com/ghpvc/?username=zainhamid&style=for-the-badge&color=0e7490&labelColor=020617&label=PROFILE+VIEWS" alt="profile views" />
+<a href="https://vault-flow.space"><img src="https://img.shields.io/badge/VaultFlow-LIVE-22d3ee?style=for-the-badge&labelColor=020617&logo=icloud&logoColor=22d3ee" alt="vaultflow live" /></a>
+<img src="https://img.shields.io/badge/STATUS-online-22d3ee?style=for-the-badge&labelColor=020617" alt="status online" />
 
 </div>
 
-<br/>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  ABOUT · terminal card (fenced block = perfectly consistent everywhere)     -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=3&section=header" alt="divider" />
 
-```ansi
-[36m┌─[ ~/zain/profile ]───────────────────────────────────────────────────┐[0m
-  [32m$[0m whoami
-  [37mZain Hamid — App Developer · Software Engineer · Startup Founder[0m
-
-  [32m$[0m cat mission.txt
-  [37mI build cloud products, ship cross-platform mobile apps, and[0m
-  [37mengineer autonomous robotics. Obsessed with deadlines that never[0m
-  [37mget missed and systems that never go offline.[0m
-
-  [32m$[0m systemctl status --user
-  [36m●[0m vaultflow.service    [32mactive (running)[0m   founder & ceo
-  [36m●[0m mobile.pipeline      [32mactive (running)[0m   react-native · ios + android
-  [36m●[0m ftc.robotics         [32mactive (running)[0m   java autonomous · outreach
-[36m└───────────────────────────────────────────────────────────────────────┘[0m
-```
-
-<br/>
-
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  VAULTFLOW SPOTLIGHT                                                         -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!-- ─────────────────────────  [ 01 ] ABOUT  ───────────────────────── -->
 
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=22D3EE&background=0D111700&center=true&width=500&lines=%F0%9F%9B%B0%EF%B8%8F++vaultflow+%C2%B7+executive+overview" alt="vaultflow header" />
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fabout%20%C2%B7%20whoami&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="about" />
 </div>
-
-<table align="center" width="100%">
-<tr>
-<td width="30%" align="center" valign="middle">
-
-<img src="vaultflow-icon-square.png" width="170" alt="VaultFlow" />
-
-<br/>
-
-<a href="https://vault-flow.space">
-<img src="https://img.shields.io/badge/vault--flow.space-0d1117?style=for-the-badge&logo=googlechrome&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="visit" />
-</a>
-
-</td>
-<td width="70%" valign="middle">
 
 ```yaml
-company:   VaultFlow
-role:      Founder & Chief Executive Officer
-url:       https://vault-flow.space
-status:    ◉ LIVE · scaling
+# root@zainhamid:~# cat identity.yml
+identity:
+  name:        "Zain Hamid"
+  role:        "Founder & CEO @ VaultFlow"
+  focus:       ["cross-platform apps", "cloud ecosystems", "control engineering"]
+  building:    "VaultFlow — https://vault-flow.space"
+  robotics:    "FIRST Tech Challenge · control systems + business ops"
+  environment: { editor: "Cursor AI", theme: "Dark Mode Always", shell: "pwsh" }
+  status:      "shipping · 24/7 uptime · always learning"
+```
 
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
+
+<!-- ─────────────────────────  [ 02 ] VAULTFLOW SPOTLIGHT  ───────────────────────── -->
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fventures%20%C2%B7%20VaultFlow&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="vaultflow" />
+</div>
+
+<table align="center" width="100%">
+<tr>
+<td width="34%" align="center" valign="middle">
+
+<img src="vaultflow-icon-square.png" width="180" alt="VaultFlow" />
+
+<br/><br/>
+
+<a href="https://vault-flow.space"><img src="https://img.shields.io/badge/visit-vault--flow.space-22d3ee?style=for-the-badge&labelColor=020617&logo=googlechrome&logoColor=22d3ee" alt="visit" /></a>
+
+</td>
+<td width="66%" valign="middle">
+
+```yaml
+# ~/ventures/vaultflow.manifest
+product:  "VaultFlow"
+url:      "https://vault-flow.space"
+ceo:      "Zain Hamid"
+category: "Cloud Ecosystem · SaaS"
 mission: >
-  A cloud ecosystem that tracks document lifecycles and
-  subscription renewals — surfacing every deadline BEFORE
-  it expires, never after.
-
-stack:
-  - document_lifecycle_tracking   # ingest → monitor → alert
-  - subscription_renewal_engine   # proactive pre-expiry loop
-  - cross_platform_cloud_sync     # always in-sync sessions
+  A cloud ecosystem that tracks document
+  lifecycles and subscription renewals,
+  surfacing every expiry BEFORE it lapses.
+core:
+  - lifecycle tracking engine
+  - pre-expiration renewal alerts
+  - subscription intelligence dashboard
+  - secure multi-tenant vaults
+stack: ["React Native", "TypeScript", "Firebase"]
 ```
 
 </td>
 </tr>
 </table>
 
-<br/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  PROJECT GRID · 2x2 clean bento                                             -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!-- ─────────────────────────  [ 03 ] PROJECT BENTO  ───────────────────────── -->
 
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=22D3EE&background=0D111700&center=true&width=500&lines=%F0%9F%9A%80++active+deployments" alt="deployments header" />
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fdeployments%20%C2%B7%20project_grid&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="projects" />
 </div>
 
 <table align="center" width="100%">
 <tr>
 <td width="50%" valign="top">
 
-### 🛰️ &nbsp;VaultFlow Cloud Portal
+### `▚` VaultFlow Cloud Portal
+> The flagship cloud ecosystem. Tracks document lifecycles and subscription renewals, alerting users **before** anything expires.
+- lifecycle + renewal engine
+- multi-tenant secure vaults
+- live subscription dashboard
 
-`prod · deployed` &nbsp; `tier · saas`
-
-The flagship web control plane — users register documents and subscriptions, then the renewal engine works silently in the background with real-time cloud sync.
-
-```diff
-+ lifecycle dashboards & timeline views
-+ automated pre-expiration scheduling
-+ encrypted auth & secure storage
-```
-
-![React](https://img.shields.io/badge/React-0d1117?style=flat-square&logo=react&logoColor=22d3ee)
-![TypeScript](https://img.shields.io/badge/TS-0d1117?style=flat-square&logo=typescript&logoColor=22d3ee)
-![Firebase](https://img.shields.io/badge/Firebase-0d1117?style=flat-square&logo=firebase&logoColor=22d3ee)
+`TypeScript` · `React Native` · `Firebase`
 
 </td>
 <td width="50%" valign="top">
 
-### 📱 &nbsp;Mobile App Engineering
+### `▟` Mobile App Engineering
+> Modern cross-platform mobile solutions built with clean, reactive architecture.
+- clean reactive view-models
+- low-latency state management
+- fluid native-feel UI
 
-`build · shipping` &nbsp; `cross-platform`
-
-Native-feeling experiences from a single reactive codebase — obsessive focus on fluid motion, gesture UX, and battery-friendly performance.
-
-```diff
-+ clean reactive view-model architecture
-+ low-latency state management
-+ 60fps · gesture-driven · offline-first
-```
-
-![React Native](https://img.shields.io/badge/React_Native-0d1117?style=flat-square&logo=react&logoColor=22d3ee)
-![Xcode](https://img.shields.io/badge/Xcode-0d1117?style=flat-square&logo=xcode&logoColor=22d3ee)
-![TypeScript](https://img.shields.io/badge/TS-0d1117?style=flat-square&logo=typescript&logoColor=22d3ee)
+`React Native` · `TypeScript` · `Xcode`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### ⚙️ &nbsp;FTC — Control Engineering
+### `▙` FTC · Control Engineering
+> Physical robot control for the FIRST Tech Challenge.
+- multi-motor chassis control
+- sensor mapping arrays
+- Java autonomous routines
 
-`subsystem · hardware` &nbsp; `java`
-
-Where mechanical hardware meets deterministic software — I architect the robot's brain, from raw motor signals to autonomous decisions.
-
-```diff
-+ multi-motor chassis & drivetrain kinematics
-+ sensor arrays (IMU · encoders · color)
-+ Java autonomous routines & PID control
-```
-
-![Java](https://img.shields.io/badge/Java-0d1117?style=flat-square&logo=openjdk&logoColor=22d3ee)
-![Fusion](https://img.shields.io/badge/Fusion-0d1117?style=flat-square&logo=autodesk&logoColor=22d3ee)
+`Java` · `Autodesk Fusion`
 
 </td>
 <td width="50%" valign="top">
 
-### 📈 &nbsp;FTC — Business & Outreach
+### `▜` FTC · Business & Outreach
+> The corporate engine behind a competitive robotics team.
+- sponsorship formulation
+- documentation pipelines
+- community outreach marketing
 
-`subsystem · operations` &nbsp; `growth`
-
-Running a competitive robotics team is running a startup — I drive funding, brand, docs, and community outreach that keeps the hardware division on the field.
-
-```diff
-+ sponsorship formulation & pitch decks
-+ engineering documentation pipelines
-+ community outreach & STEM marketing
-```
-
-![Sponsorship](https://img.shields.io/badge/Sponsorship-0d1117?style=flat-square&logo=handshake&logoColor=22d3ee)
-![Outreach](https://img.shields.io/badge/Outreach-0d1117?style=flat-square&logo=googlemarketingplatform&logoColor=22d3ee)
+`Ops` · `Marketing` · `Docs`
 
 </td>
 </tr>
 </table>
 
-<br/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  TECH STACK                                                                 -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!-- ─────────────────────────  [ 04 ] STACK INVENTORY  ───────────────────────── -->
 
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=22D3EE&background=0D111700&center=true&width=500&lines=%F0%9F%A7%B0++stack+inventory" alt="stack header" />
-
-<br/><br/>
-
-**`languages & app frameworks`**
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fstack%20%C2%B7%20tech_inventory&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="stack" />
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,java,react,tailwind&theme=dark" alt="languages" />
+**Languages & App Frameworks**
+
+<img src="https://skillicons.dev/icons?i=ts,js,python,java,react,tailwind&theme=dark" alt="languages" />
 
 <br/><br/>
 
-**`cloud backend & dev suites`**
+**Cloud Backend & Development Suites**
 
+<img src="https://skillicons.dev/icons?i=firebase,xcode,git,github,vscode,figma&theme=dark" alt="tools" />
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/TypeScript-020617?style=for-the-badge&logo=typescript&logoColor=22d3ee" alt="ts" />
+<img src="https://img.shields.io/badge/JavaScript-020617?style=for-the-badge&logo=javascript&logoColor=22d3ee" alt="js" />
+<img src="https://img.shields.io/badge/Python-020617?style=for-the-badge&logo=python&logoColor=22d3ee" alt="py" />
+<img src="https://img.shields.io/badge/Java-020617?style=for-the-badge&logo=openjdk&logoColor=22d3ee" alt="java" />
+<img src="https://img.shields.io/badge/React_Native-020617?style=for-the-badge&logo=react&logoColor=22d3ee" alt="rn" />
 <br/>
-
-<img src="https://skillicons.dev/icons?i=firebase,git,androidstudio,apple,figma,vscode&theme=dark" alt="suites" />
+<img src="https://img.shields.io/badge/TailwindCSS-020617?style=for-the-badge&logo=tailwindcss&logoColor=22d3ee" alt="tw" />
+<img src="https://img.shields.io/badge/Firebase-020617?style=for-the-badge&logo=firebase&logoColor=22d3ee" alt="fb" />
+<img src="https://img.shields.io/badge/Xcode-020617?style=for-the-badge&logo=xcode&logoColor=22d3ee" alt="xcode" />
+<img src="https://img.shields.io/badge/Autodesk_Fusion-020617?style=for-the-badge&logo=autodesk&logoColor=22d3ee" alt="fusion" />
+<img src="https://img.shields.io/badge/Git-020617?style=for-the-badge&logo=git&logoColor=22d3ee" alt="git" />
+<img src="https://img.shields.io/badge/Cursor_AI-020617?style=for-the-badge&logo=cursor&logoColor=22d3ee" alt="cursor" />
 
 </div>
 
-<br/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  GITHUB ANALYTICS · borderless cards (bg matches dark canvas)               -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!-- ─────────────────────────  [ 05 ] TELEMETRY WALL  ───────────────────────── -->
 
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=22D3EE&background=0D111700&center=true&width=500&lines=%F0%9F%93%A1++live+telemetry" alt="telemetry header" />
-
-<br/><br/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=zainhamid&show_icons=true&count_private=true&hide_border=true&title_color=22d3ee&icon_color=22d3ee&text_color=c9d1d9&bg_color=0d1117&include_all_commits=true" alt="stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zainhamid&layout=compact&hide_border=true&title_color=22d3ee&text_color=c9d1d9&bg_color=0d1117&langs_count=8" alt="languages" />
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Ftelemetry%20%C2%B7%20live_metrics&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="telemetry" />
 
 <br/>
 
-<img height="170" src="https://streak-stats.demolab.com?user=zainhamid&hide_border=true&background=0d1117&stroke=0e7490&ring=22d3ee&fire=22d3ee&currStreakLabel=22d3ee&sideLabels=c9d1d9&dates=8b949e&currStreakNum=e6fbff&sideNums=e6fbff" alt="streak" />
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=zainhamid&show_icons=true&hide_border=true&bg_color=0d1117&title_color=22d3ee&icon_color=22d3ee&text_color=b6ecff&count_private=true&include_all_commits=true" alt="stats" />
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zainhamid&layout=compact&hide_border=true&bg_color=0d1117&title_color=22d3ee&text_color=b6ecff&langs_count=8" alt="top langs" />
+
+<br/>
+
+<img height="180" src="https://streak-stats.demolab.com?user=zainhamid&hide_border=true&background=0d1117&stroke=0e7490&ring=22d3ee&fire=22d3ee&currStreakLabel=22d3ee&sideLabels=b6ecff&dates=6b7280&currStreakNum=b6ecff&sideNums=b6ecff&excludeDaysLabel=6b7280" alt="streak" />
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=zainhamid&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6&title_color=22d3ee&text_color=c9d1d9" alt="trophies" />
+<img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=zainhamid&bg_color=0d1117&color=22d3ee&line=0e7490&point=b6ecff&area=true&hide_border=true&custom_title=Contribution%20Telemetry" alt="activity graph" />
 
-<br/><br/>
+<br/>
 
-<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=zainhamid&bg_color=0d1117&color=22d3ee&line=22d3ee&point=e6fbff&area=true&area_color=0e7490&hide_border=true&custom_title=contribution%20telemetry%20%C2%B7%20commit%20frequency" alt="activity graph" />
-
-<br/><br/>
-
-<!-- contribution snake · needs Platane/snk action enabled on this repo -->
-<img width="95%" src="https://raw.githubusercontent.com/zainhamid/zainhamid/output/github-contribution-grid-snake-dark.svg" alt="snake" />
+<img src="https://github-profile-trophy.vercel.app/?username=zainhamid&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="trophies" />
 
 </div>
 
-<br/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  SYSTEM OPS LOG                                                             -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!-- ─────────────────────────  [ 06 ] DEEP-DIVE (INTERACTIVE)  ───────────────────────── -->
 
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=22D3EE&background=0D111700&center=true&width=500&lines=%E2%9A%A1++system+status+%26+operations" alt="ops header" />
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fanalytics%20%C2%B7%20deep_dive&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="deep dive" />
 </div>
 
+<details>
+<summary><b>&nbsp;▸ expand full analytics report</b></summary>
+<br/>
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/wakatime?username=zainhamid&hide_border=true&bg_color=0d1117&title_color=22d3ee&text_color=b6ecff&layout=compact" alt="wakatime" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zainhamid&hide_border=true&bg_color=0d1117&title_color=22d3ee&text_color=b6ecff&layout=donut&langs_count=10" alt="langs donut" />
+
+</div>
+</details>
+
+<details>
+<summary><b>&nbsp;▸ expand dev philosophy</b></summary>
 <br/>
 
 ```bash
-[  OK  ]  system.runtime .................  24/7 uptime · always compiling
-[  OK  ]  env.DARK_MODE ..................  export DARK_MODE=always
-[  OK  ]  env.EDITOR .....................  export EDITOR=cursor    # AI-native
-[  OK  ]  cron.vaultflow_scaling .........  */5 * * * *   marketing_loop.sh --scale
-[  OK  ]  cron.renewal_engine ............  0 * * * *     scan --pre-expiry --notify
-[  OK  ]  cron.mobile_pipeline ...........  0 */6 * * *   build --cross-platform
-[  OK  ]  cron.ftc_outreach ..............  0 9 * * 1-5   send --sponsors --community
-[  OK  ]  deploy.region ..................  edge · multi-region cloud
-[ WARN ]  sleep.daemon ...................  DEFERRED — too busy building 🚀
-[  OK  ]  all systems ....................  OPERATIONAL · 0 blockers
+root@zainhamid:~# cat philosophy.log
+[ 0.001 ]  ship small, ship often — momentum compounds.
+[ 0.002 ]  clean state management > clever state management.
+[ 0.003 ]  a robot that documents itself wins sponsors.
+[ 0.004 ]  the best UI is the one you never notice.
+[ 0.005 ]  dark mode is not a preference, it's a lifestyle.
 ```
+
+</details>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
+
+<!-- ─────────────────────────  [ 07 ] CONTRIBUTION SNAKE  ───────────────────────── -->
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fautomation%20%C2%B7%20commit_snake&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="snake" />
 
 <br/>
 
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!--  CONTACT · FOOTER                                                           -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=22D3EE&background=0D111700&center=true&width=500&lines=%F0%9F%93%A1++open+communication+channels" alt="contact header" />
-
-<br/><br/>
-
-<a href="https://www.linkedin.com/in/zain-hamid-390523393/"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="linkedin" /></a>
-<a href="https://www.instagram.com/zainy_2012/"><img src="https://img.shields.io/badge/Instagram-0d1117?style=for-the-badge&logo=instagram&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="instagram" /></a>
-<a href="mailto:zhworldchannel@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="email" /></a>
-<a href="https://vault-flow.space"><img src="https://img.shields.io/badge/VaultFlow-0d1117?style=for-the-badge&logo=icloud&logoColor=22d3ee&labelColor=0d1117&color=0e7490" alt="vaultflow" /></a>
-
-<br/><br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=17&pause=1200&color=22D3EE&background=0D111700&center=true&multiline=true&repeat=true&width=760&height=60&lines=%5Bzain%40terminal%3A~%23%5D+logout+--session%3Dterminate_successful;connection+closed+%C2%B7+see+you+in+the+commits+%F0%9F%9A%80" alt="logout" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zainhamid/zainhamid/output/github-contribution-grid-snake-dark.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/zainhamid/zainhamid/output/github-contribution-grid-snake.svg" />
+</picture>
 
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,55:0e7490,100:0d1117&height=150&section=footer&text=session%20terminated&fontColor=e6fbff&fontSize=22&fontAlignY=72&animation=fadeIn" alt="footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
+
+<!-- ─────────────────────────  [ 08 ] SYSTEM OPS LOG  ───────────────────────── -->
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fops%20%C2%B7%20system_status&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="ops" />
+</div>
+
+```ini
+# systemctl status zainhamid.service   —   ● active (running)
+[uptime]        24/7 · always shipping
+[env.EDITOR]    Cursor AI (native)
+[env.THEME]     Dark Mode Always
+[env.SHELL]     pwsh
+
+# active cron jobs
+0  */1 * * *   vaultflow.scaling.loop        → running · marketing + growth
+*/5 *  * * *   renewal.engine.watch          → running · pre-expiry alerts
+0   3  * * *   mobile.build.pipeline          → running · nightly CI
+0   9  * * 6   ftc.outreach.campaign          → running · sponsors + community
+*   *  * * *   learning.daemon                → running · always on
+```
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&height=45&lines=%5Bcron%5D+vaultflow.scaling.loop+..............+OK;%5Bcron%5D+renewal.engine.watch+.............+OK;%5Bcron%5D+mobile.build.pipeline+............+OK;%5Bcron%5D+ftc.outreach.campaign+...........+OK" alt="cron feed" />
+
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0e7490,100:020617&height=3&section=header" alt="divider" />
+
+<!-- ─────────────────────────  [ 09 ] CONTACT  ───────────────────────── -->
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020617,100:0e7490&height=44&section=header&text=%20~%2Fcontact%20%C2%B7%20establish_connection&fontSize=20&fontColor=22d3ee&fontAlignY=58&fontAlign=8" alt="contact" />
+
+<br/>
+
+<a href="https://www.linkedin.com/in/zain-hamid-390523393/"><img src="https://img.shields.io/badge/LinkedIn-connect-22d3ee?style=for-the-badge&logo=linkedin&logoColor=22d3ee&labelColor=020617" alt="linkedin" /></a>
+<a href="https://www.instagram.com/zainy_2012/"><img src="https://img.shields.io/badge/Instagram-follow-22d3ee?style=for-the-badge&logo=instagram&logoColor=22d3ee&labelColor=020617" alt="instagram" /></a>
+<a href="mailto:zhworldchannel@gmail.com"><img src="https://img.shields.io/badge/Email-message-22d3ee?style=for-the-badge&logo=gmail&logoColor=22d3ee&labelColor=020617" alt="email" /></a>
+<a href="https://vault-flow.space"><img src="https://img.shields.io/badge/VaultFlow-launch-22d3ee?style=for-the-badge&logo=icloud&logoColor=22d3ee&labelColor=020617" alt="vaultflow" /></a>
+
+<br/><br/>
+
+<!-- ─────────────────────────  LOGOUT  ───────────────────────── -->
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=22D3EE&center=true&vCenter=true&width=760&height=55&lines=%5Bzain%40terminal%3A~%23%5D+logout+--session%3Dterminate_successful;connection+closed+%C2%B7+thanks+for+visiting+%E2%97%89" alt="logout" />
+
+</div>
+
+<!-- ─────────────────────────  FOOTER WAVE  ───────────────────────── -->
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,50:0e7490,100:020617&height=150&section=footer&animation=fadeIn" alt="footer" />
