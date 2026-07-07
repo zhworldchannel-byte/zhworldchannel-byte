@@ -59,8 +59,10 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .nav .clock{display:inline-flex;align-items:center;gap:7px;font-size:12px;white-space:nowrap;
   flex:0 0 auto;font-variant-numeric:tabular-nums;letter-spacing:.3px}
 .nav .clock .d{color:var(--muted)}
-.nav .clock .sep{color:var(--line);color:rgba(57,211,83,.4)}
+.nav .clock .sep{color:rgba(57,211,83,.4)}
 .nav .clock .t{color:var(--green)}
+.nav .clock .bar{width:1px;height:14px;border-radius:1px;
+  background:linear-gradient(var(--green),rgba(57,211,83,.25));opacity:.7}
 .nav .burger{display:none;background:none;border:1px solid var(--line);color:var(--green);
   border-radius:8px;padding:6px 10px;font-size:16px;cursor:pointer}
 .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);

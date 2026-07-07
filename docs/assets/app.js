@@ -57,7 +57,7 @@ const PAGES = [
   const upd=()=>{const d=new Date();
     const date=d.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
     const time=d.toLocaleTimeString(undefined,{hour12:false});
-    c.innerHTML='<span class="sep">·</span><span class="d">'+date+'</span><span class="sep">·</span><span class="t">'+time+'</span>';};
+    c.innerHTML='<span class="bar"></span><span class="d">'+date+'</span><span class="sep">·</span><span class="t">'+time+'</span>';};
   upd(); setInterval(upd,1000);
 })();
 
