@@ -42,6 +42,28 @@ const PAGES = [
   document.querySelectorAll('#yr').forEach(e=>e.textContent=new Date().getFullYear());
 })();
 
+/* ---------- favicon (terminal '>' glyph, injected everywhere) ---------- */
+(function(){
+  const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="%23010409"/><text x="50" y="70" font-size="60" font-family="monospace" fill="%2339d353" text-anchor="middle">&gt;_</text></svg>';
+  const l=document.createElement('link'); l.rel='icon'; l.type='image/svg+xml';
+  l.href='data:image/svg+xml,'+svg; document.head.appendChild(l);
+})();
+
+/* ---------- back-to-top button ---------- */
+(function(){
+  const btn=document.createElement('a'); btn.className='totop'; btn.href='#'; btn.innerHTML='↑';
+  btn.setAttribute('aria-label','back to top');
+  btn.addEventListener('click',e=>{e.preventDefault();scrollTo({top:0,behavior:'smooth'});});
+  document.body.appendChild(btn);
+  addEventListener('scroll',()=>btn.classList.toggle('show',scrollY>420),{passive:true});
+})();
+
+/* ---------- terminal status clock ---------- */
+(function(){
+  const c=document.getElementById('tclock'); if(!c) return;
+  const tick=()=>c.textContent=new Date().toLocaleTimeString(); tick(); setInterval(tick,1000);
+})();
+
 /* ---------- reveal on scroll ---------- */
 (function(){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
