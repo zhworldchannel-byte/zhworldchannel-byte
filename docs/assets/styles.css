@@ -218,13 +218,22 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .proj-detail-body p:last-child{margin-bottom:0}
 @keyframes projDetailIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 
-/* VaultFlow social icon links */
-.vf-socials{display:flex;gap:6px;align-items:center;margin:-2px 0 12px}
-.vf-soc{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;
-  border:1px solid rgba(57,211,83,.1);background:transparent;color:var(--muted);
-  text-decoration:none;transition:color .2s,border-color .2s,background .2s,transform .2s}
-.vf-soc svg{width:14px;height:14px;fill:currentColor}
-.vf-soc:hover{color:var(--green);border-color:rgba(57,211,83,.32);background:rgba(57,211,83,.06);transform:translateY(-1px)}
+/* VaultFlow card header + social icon strip */
+.vf-head{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;width:100%;margin-bottom:2px}
+.vf-head-left{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;min-width:0}
+.vf-head .vflogo{margin-right:0}
+.vf-socials{display:inline-flex;align-items:stretch;flex-shrink:0;margin:0;
+  border:1px solid rgba(57,211,83,.16);border-radius:9px;overflow:hidden;background:rgba(0,0,0,.24)}
+.vf-soc{display:grid;place-items:center;width:34px;height:32px;border:none;border-radius:0;
+  border-right:1px solid rgba(57,211,83,.1);background:transparent;color:var(--muted);
+  text-decoration:none;transition:color .2s,background .2s}
+.vf-soc:last-child{border-right:none}
+.vf-soc svg{width:15px;height:15px;fill:currentColor;display:block}
+.vf-soc:hover{color:var(--green);background:rgba(57,211,83,.08)}
+@media (max-width:520px){
+  .vf-head{align-items:flex-start}
+  .vf-socials{margin-left:auto}
+}
 
 /* chips */
 .chips{display:flex;flex-wrap:wrap;gap:9px}
