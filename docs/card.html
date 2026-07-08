@@ -113,33 +113,31 @@
 
   <div class="card-toast" id="cardToast" role="status" aria-live="polite"></div>
 
-  <!-- fixed-layout business card for download + print only -->
-  <div class="biz-export-root" id="bizExportRoot" aria-hidden="true">
-    <article class="biz-card" id="bizCard">
-      <div class="biz-stripe"></div>
-      <div class="biz-layout">
-        <div class="biz-photo">
-          <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
-            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'biz-photo-fallback',textContent:'ZH'}))" />
-        </div>
-        <div class="biz-main">
-          <div class="biz-head">
-            <h2 class="biz-name">Zain Hamid</h2>
-            <span class="biz-opp"><span class="biz-dot"></span>open to opportunities</span>
-          </div>
-          <p class="biz-line biz-cyan">Founder &amp; CEO @ VaultFlow</p>
-          <p class="biz-line biz-muted">Full-Stack Developer</p>
-          <div class="biz-contact">
-            <p>+1 425-364-0252</p>
-            <p>zhworldchannel@gmail.com</p>
-            <p>zainhamidzia@gmail.com</p>
-          </div>
+  <footer class="site-footer"></footer>
+</div>
+
+<!-- fixed-layout business card for download + print only (outside .wrap for print) -->
+<div class="biz-export-root" id="bizExportRoot" aria-hidden="true">
+  <article class="biz-card" id="bizCard">
+    <div class="biz-stripe"></div>
+    <div class="biz-layout">
+      <div class="biz-photo">
+        <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
+          onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'biz-photo-fallback',textContent:'ZH'}))" />
+      </div>
+      <div class="biz-main">
+        <h2 class="biz-name">Zain Hamid</h2>
+        <span class="biz-opp"><span class="biz-dot"></span>open to opportunities</span>
+        <p class="biz-line biz-cyan">Founder &amp; CEO @ VaultFlow</p>
+        <p class="biz-line biz-muted">Full-Stack Developer</p>
+        <div class="biz-contact">
+          <p>+1 425-364-0252</p>
+          <p>zhworldchannel@gmail.com</p>
+          <p>zainhamidzia@gmail.com</p>
         </div>
       </div>
-    </article>
-  </div>
-
-  <footer class="site-footer"></footer>
+    </div>
+  </article>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="assets/app.js"></script>
@@ -199,7 +197,7 @@ Open to opportunities`;
     await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
     try{
       const canvas=await html2canvas(bizCard,{
-        width:1050,height:600,scale:2,backgroundColor:'#010409',useCORS:true,logging:false
+        width:1050,height:600,scale:3,backgroundColor:'#010409',useCORS:true,logging:false
       });
       const a=document.createElement('a');
       a.download='zain-hamid-business-card.png';
@@ -215,7 +213,7 @@ Open to opportunities`;
     shareBtn.hidden=false;
     shareBtn.addEventListener('click',async()=>{
       try{
-        await navigator.share({title:'Zain Hamid — Digital ID',text:CONTACT,url:location.href});
+        await navigator.share({title:'Zain Hamid — Digital Developer Card',text:CONTACT,url:location.href});
       }catch(e){}
     });
   }
