@@ -113,6 +113,32 @@
 
   <div class="card-toast" id="cardToast" role="status" aria-live="polite"></div>
 
+  <!-- fixed-layout business card for download + print only -->
+  <div class="biz-export-root" id="bizExportRoot" aria-hidden="true">
+    <article class="biz-card" id="bizCard">
+      <div class="biz-stripe"></div>
+      <div class="biz-layout">
+        <div class="biz-photo">
+          <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'biz-photo-fallback',textContent:'ZH'}))" />
+        </div>
+        <div class="biz-main">
+          <div class="biz-head">
+            <h2 class="biz-name">Zain Hamid</h2>
+            <span class="biz-opp"><span class="biz-dot"></span>open to opportunities</span>
+          </div>
+          <p class="biz-line biz-cyan">Founder &amp; CEO @ VaultFlow</p>
+          <p class="biz-line biz-muted">Full-Stack Developer</p>
+          <div class="biz-contact">
+            <p>+1 425-364-0252</p>
+            <p>zhworldchannel@gmail.com</p>
+            <p>zainhamidzia@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
   <footer class="site-footer"></footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
@@ -164,25 +190,23 @@ Open to opportunities`;
   }
 
   document.getElementById('printCard')?.addEventListener('click',()=>window.print());
-  window.addEventListener('beforeprint',()=>card?.classList.add('id-export'));
-  window.addEventListener('afterprint',()=>card?.classList.remove('id-export'));
 
   document.getElementById('dlCard')?.addEventListener('click',async()=>{
     const btn=document.getElementById('dlCard');
-    if(!card||typeof html2canvas!=='function') return;
-    card.style.transform='';
+    const bizCard=document.getElementById('bizCard');
+    if(!bizCard||typeof html2canvas!=='function') return;
     btn.disabled=true; btn.textContent='rendering…';
-    card.classList.add('id-export');
     await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
     try{
-      const canvas=await html2canvas(card,{scale:3,backgroundColor:'#010409',useCORS:true,logging:false});
+      const canvas=await html2canvas(bizCard,{
+        width:1050,height:600,scale:2,backgroundColor:'#010409',useCORS:true,logging:false
+      });
       const a=document.createElement('a');
       a.download='zain-hamid-business-card.png';
       a.href=canvas.toDataURL('image/png');
       a.click();
       showToast('Card downloaded ✓');
     }catch(e){ showToast('Download failed — try print'); }
-    card.classList.remove('id-export');
     btn.disabled=false; btn.textContent='▸ download PNG';
   });
 
