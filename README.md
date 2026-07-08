@@ -27,7 +27,7 @@
 <img src="https://img.shields.io/badge/%E2%96%B6%20LAUNCH%20INTERACTIVE%20DASHBOARD-010409?style=for-the-badge&logo=githubpages&logoColor=39d353&labelColor=010409&color=39d353" alt="launch dashboard" height="46" />
 </a>
 
-<sub>live github metrics · matrix animation · live language donut · a terminal you can type commands into</sub>
+<sub>terminal aesthetic · matrix rain · boot screen · projects · games · résumé · contact</sub>
 
 <br/><br/>
 
