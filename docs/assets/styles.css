@@ -138,10 +138,16 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .stat{text-align:center}
 .stat .ico{opacity:.85;display:flex;justify-content:center}
 /* custom line icons (replaces emojis) */
-.ic{width:1.05em;height:1.05em;flex:0 0 auto;stroke:currentColor;fill:none;
+.ic{width:18px;height:18px;min-width:18px;flex:0 0 18px;display:block;
+  color:var(--green);stroke:currentColor;fill:none;
   stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.stat .ico svg{width:28px;height:28px;stroke:var(--green);fill:none;
-  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block}
+.ic *{fill:none!important;stroke:inherit;stroke-width:inherit;
+  stroke-linecap:inherit;stroke-linejoin:inherit;vector-effect:non-scaling-stroke}
+.stat .ico svg{width:26px;height:26px;min-width:26px;display:block;
+  color:var(--green);stroke:var(--green);fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.stat .ico svg *{fill:none!important;stroke:inherit;stroke-width:inherit;
+  stroke-linecap:inherit;stroke-linejoin:inherit}
 .stat .num{font-size:clamp(30px,5vw,42px);font-weight:800;color:#fff;line-height:1.1;margin:8px 0}
 .stat .lbl{font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
 
