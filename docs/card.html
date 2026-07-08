@@ -46,14 +46,13 @@
   <section class="hero reveal" style="padding-top:40px">
     <div class="prompt"><b>root@zainhamid</b>:~# ./issue_id.sh</div>
     <h1 style="font-size:clamp(30px,5.5vw,58px)">Digital Developer Card</h1>
-    <div class="role">Hover to tilt · click any field to copy · download or share below</div>
+    <div class="role">Hover to tilt · click any field to copy · download below</div>
   </section>
 
   <div class="card-tools reveal">
     <div class="btns c">
       <button class="btn solid" type="button" id="dlCard">▸ download PNG</button>
       <button class="btn" type="button" id="copyAll">copy all contact</button>
-      <button class="btn" type="button" id="printCard">print</button>
       <button class="btn" type="button" id="shareCard" hidden>share</button>
     </div>
   </div>
@@ -116,25 +115,24 @@
   <footer class="site-footer"></footer>
 </div>
 
-<!-- fixed-layout business card for download + print only (outside .wrap for print) -->
+<!-- fixed-layout business card for download only -->
 <div class="biz-export-root" id="bizExportRoot" aria-hidden="true">
   <article class="biz-card" id="bizCard">
     <div class="biz-stripe"></div>
-    <div class="biz-layout">
-      <div class="biz-photo">
-        <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
-          onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'biz-photo-fallback',textContent:'ZH'}))" />
-      </div>
-      <div class="biz-main">
-        <h2 class="biz-name">Zain Hamid</h2>
-        <span class="biz-opp"><span class="biz-dot"></span>open to opportunities</span>
-        <p class="biz-line biz-cyan">Founder &amp; CEO @ VaultFlow</p>
-        <p class="biz-line biz-muted">Full-Stack Developer</p>
-        <div class="biz-contact">
-          <p>+1 425-364-0252</p>
-          <p>zhworldchannel@gmail.com</p>
-          <p>zainhamidzia@gmail.com</p>
-        </div>
+    <div class="biz-photo">
+      <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'biz-photo-fallback',textContent:'ZH'}))" />
+    </div>
+    <div class="biz-main">
+      <h2 class="biz-name">Zain Hamid</h2>
+      <span class="biz-opp"><span class="biz-dot"></span>open to opportunities</span>
+      <p class="biz-line biz-cyan">Founder &amp; CEO @ VaultFlow</p>
+      <p class="biz-line biz-muted">Full-Stack Developer</p>
+      <div class="biz-divider"></div>
+      <div class="biz-contact">
+        <p>+1 425-364-0252</p>
+        <p>zhworldchannel@gmail.com</p>
+        <p>zainhamidzia@gmail.com</p>
       </div>
     </div>
   </article>
@@ -187,8 +185,6 @@ Open to opportunities`;
     shell.addEventListener('mouseleave',()=>{ card.style.transform=''; });
   }
 
-  document.getElementById('printCard')?.addEventListener('click',()=>window.print());
-
   document.getElementById('dlCard')?.addEventListener('click',async()=>{
     const btn=document.getElementById('dlCard');
     const bizCard=document.getElementById('bizCard');
@@ -204,7 +200,7 @@ Open to opportunities`;
       a.href=canvas.toDataURL('image/png');
       a.click();
       showToast('Card downloaded ✓');
-    }catch(e){ showToast('Download failed — try print'); }
+    }catch(e){ showToast('Download failed — try again'); }
     btn.disabled=false; btn.textContent='▸ download PNG';
   });
 
