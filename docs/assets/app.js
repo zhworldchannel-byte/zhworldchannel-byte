@@ -9,14 +9,21 @@ const PAGES = [
   ['projects.html','projects'],['games.html','games'],['robotics.html','robotics'],
   ['stack.html','stack'],['terminal.html','terminal'],['contact.html','contact']
 ];
-(function renderNav(){
+(function renderShell(){
   const here=(location.pathname.split('/').pop()||'index.html')||'index.html';
+  const active=h=>(h===here||(here===''&&h==='index.html'))?' class="active"':'';
+  const navHtml=PAGES.map(([h,l])=>`<a href="${h}"${active(h)}>${l}</a>`).join('');
   const links=document.querySelector('.nav .links');
-  if(links) links.innerHTML=PAGES.map(([h,l])=>
-    `<a href="${h}"${(h===here||(here===''&&h==='index.html'))?' class="active"':''}>${l}</a>`).join('');
-  const fnav=document.querySelector('footer .fnav');
-  if(fnav) fnav.innerHTML=PAGES.map(([h,l])=>
-    `<a href="${h}"${(h===here||(here===''&&h==='index.html'))?' class="active"':''}>${l}</a>`).join('');
+  if(links) links.innerHTML=navHtml;
+  const foot=document.querySelector('footer.site-footer');
+  if(foot){
+    foot.innerHTML=`<div class="foot-inner">
+      <div class="foot-brand"><span class="foot-dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span><span><b>Zain Hamid</b> · <span class="foot-path">~/hub</span></span></div>
+      <nav class="fnav" aria-label="Footer navigation">${navHtml}</nav>
+    </div>
+    <div class="foot-copy">© <span class="yr"></span> Zain Hamid · developer profile</div>`;
+    foot.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());
+  }
 })();
 
 /* ---------- matrix rain ---------- */
