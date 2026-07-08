@@ -136,7 +136,12 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 
 /* stat cards */
 .stat{text-align:center}
-.stat .ico{font-size:22px;opacity:.7}
+.stat .ico{opacity:.85;display:flex;justify-content:center}
+/* custom line icons (replaces emojis) */
+.ic{width:1.05em;height:1.05em;flex:0 0 auto;stroke:currentColor;fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.stat .ico svg{width:28px;height:28px;stroke:var(--green);fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block}
 .stat .num{font-size:clamp(30px,5vw,42px);font-weight:800;color:#fff;line-height:1.1;margin:8px 0}
 .stat .lbl{font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
 
