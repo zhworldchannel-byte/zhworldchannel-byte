@@ -468,3 +468,15 @@ loadGitHub();
     else print('command not found: '+parts[0]+' — type <span class="g">help</span>','m');
   });
 })();
+
+/* ---------- cursor spotlight glow on cards ---------- */
+(function(){
+  if(!matchMedia('(pointer:fine)').matches) return;
+  document.addEventListener('mousemove',function(e){
+    const card=e.target.closest && e.target.closest('.card');
+    if(!card) return;
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    card.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
