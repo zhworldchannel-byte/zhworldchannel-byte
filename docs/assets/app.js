@@ -355,7 +355,7 @@ loadGitHub();
     websites:()=>'• Zain\'s World (Wix) — first-ever project · blog\n• Digital Delights — game/social/proxy hub · profitable\n• Arena Shooter — browser game',
     vaultflow:()=>'VaultFlow → <a href="https://vault-flow.space/" target="_blank" style="color:var(--cyan)">vault-flow.space</a> · cloud ecosystem tracking document lifecycles &amp; subscription renewals before they expire. iOS + web, secure sign-in, Google sign-in, 2FA.',
     vault:()=>cmds.vaultflow(),
-    ftc:()=>'FIRST Tech Challenge → multi-motor chassis control, sensor arrays &amp; Java autonomous + sponsorship, docs pipelines &amp; community outreach.',
+    ftc:()=>'Guided Motion · Team #32785 · FIRST Tech Challenge → multi-motor chassis control, sensor arrays &amp; Java autonomous + sponsorship, docs pipelines &amp; community outreach.',
     robotics:()=>cmds.ftc(),
     stack:()=>'TypeScript · JavaScript · Python · Java · React Native · TailwindCSS · Firebase · Xcode · Autodesk Fusion · Git · Cursor AI',
     tech:()=>cmds.stack(),
