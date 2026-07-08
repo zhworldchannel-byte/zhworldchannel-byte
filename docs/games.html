@@ -29,12 +29,13 @@
 <body>
 <script>try{if(sessionStorage.getItem('zh_booted'))document.documentElement.classList.add('booted');}catch(e){}</script>
 <div id="boot" class="boot" aria-hidden="true">
-  <div class="boot-box">
-    <div class="boot-logo">&gt;_</div>
-    <div class="boot-brand">zain@hub</div>
-    <pre class="boot-log" id="bootlog"></pre>
-    <div class="boot-track"><i id="bootbar"></i></div>
-    <div class="boot-foot"><span id="bootpct">0%</span><span class="bl">secure boot ◉</span></div>
+  <div class="win">
+    <div class="win-head"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="tt">zain@hub — boot.sh</span></div>
+    <div class="win-body">
+      <div class="boot-id"><div class="glyph">&gt;_</div><div class="idm"><b>Zain Hamid</b><span>booting ~/hub environment</span></div></div>
+      <div class="boot-steps" id="bootsteps"></div>
+      <div class="boot-prog"><div class="track"><i id="bootbar"></i></div><span class="pct" id="bootpct">0%</span></div>
+    </div>
   </div>
 </div>
 <canvas id="matrix"></canvas>

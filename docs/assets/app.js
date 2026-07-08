@@ -55,29 +55,33 @@ const PAGES = [
   const root=document.documentElement;
   if(root.classList.contains('booted')){ boot.remove(); return; }
   try{ sessionStorage.setItem('zh_booted','1'); }catch(e){}
-  const log=document.getElementById('bootlog'),
+  const steps=document.getElementById('bootsteps'),
         bar=document.getElementById('bootbar'),
         pct=document.getElementById('bootpct');
-  const lines=[
-    'BIOS ◉ zain@hub · POST check .......... ok',
-    'mounting /home/zain ................... ok',
-    'loading modules [projects · games · robotics] ... ok',
-    'initializing VaultFlow core ........... ok',
-    'establishing secure connection ........ ok',
-    'decrypting profile .................... ok',
-    'starting interface ◉'
+  const tasks=[
+    'mounting /home/zain',
+    'loading modules · projects · games · robotics',
+    'initializing VaultFlow core',
+    'establishing secure connection',
+    'compiling interface assets',
+    'decrypting profile',
+    'starting ~/hub'
   ];
   let i=0;
-  (function type(){ if(!log||i>=lines.length) return;
-    log.textContent+=(i?'\n':'')+lines[i]; i++;
-    setTimeout(type, 230+Math.random()*180); })();
+  (function add(){ if(!steps||i>=tasks.length) return;
+    const row=document.createElement('div'); row.className='boot-step';
+    row.innerHTML='<span class="ck">✓</span><span class="t">'+tasks[i]+'</span>'
+      +'<span class="lead"></span><span class="s">OK</span>';
+    steps.appendChild(row);
+    requestAnimationFrame(function(){ row.classList.add('show'); });
+    i++; setTimeout(add, 300+Math.random()*150); })();
   const t0=performance.now();
   (function prog(){ const p=Math.min(100,(performance.now()-t0)/3000*100);
     if(bar) bar.style.width=p.toFixed(1)+'%';
     if(pct) pct.textContent=Math.floor(p)+'%';
     if(p<100) requestAnimationFrame(prog); })();
   setTimeout(function(){ boot.classList.add('out');
-    setTimeout(function(){ boot.remove(); }, 520); }, 3200);
+    setTimeout(function(){ boot.remove(); }, 520); }, 3300);
 })();
 
 /* ---------- live date + time next to the prompt (top-left, borderless) ---------- */

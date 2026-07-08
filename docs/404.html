@@ -26,12 +26,13 @@
 <body>
 <script>try{if(sessionStorage.getItem('zh_booted'))document.documentElement.classList.add('booted');}catch(e){}</script>
 <div id="boot" class="boot" aria-hidden="true">
-  <div class="boot-box">
-    <div class="boot-logo">&gt;_</div>
-    <div class="boot-brand">zain@hub</div>
-    <pre class="boot-log" id="bootlog"></pre>
-    <div class="boot-track"><i id="bootbar"></i></div>
-    <div class="boot-foot"><span id="bootpct">0%</span><span class="bl">secure boot ◉</span></div>
+  <div class="win">
+    <div class="win-head"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="tt">zain@hub — boot.sh</span></div>
+    <div class="win-body">
+      <div class="boot-id"><div class="glyph">&gt;_</div><div class="idm"><b>Zain Hamid</b><span>booting ~/hub environment</span></div></div>
+      <div class="boot-steps" id="bootsteps"></div>
+      <div class="boot-prog"><div class="track"><i id="bootbar"></i></div><span class="pct" id="bootpct">0%</span></div>
+    </div>
   </div>
 </div>
 <canvas id="matrix"></canvas>
@@ -45,22 +46,31 @@
 </nav>
 
 <div class="wrap">
-  <section class="hero" style="padding-top:64px;text-align:center">
-    <div class="prompt"><b>root@zainhamid</b>:~# ./locate --path "$REQUESTED_URL"</div>
-    <div class="err404">404</div>
-    <h1 style="font-size:clamp(22px,4.5vw,34px);margin-top:8px">PAGE NOT FOUND</h1>
-    <div class="role">the file you requested has gone out of scope</div>
+  <section class="err-wrap" style="padding-top:56px">
+    <div class="err-hero">
+      <div class="err404">4<span class="z">0</span>4</div>
+      <div class="err-sub">command not found</div>
+    </div>
 
-    <pre class="err-log"><span class="p">$</span> cd /the-page-you-wanted
-<span class="e">bash: cd: /the-page-you-wanted: No such file or directory</span>
+    <div class="win">
+      <div class="win-head"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="tt">zain@hub — ~/404</span></div>
+      <pre class="err-log win-body"><span class="p">$</span> ./locate --path "$REQUESTED_URL"
+<span class="e">error: the page you requested has gone out of scope</span>
+
+<span class="p">$</span> cd /the-page-you-wanted
+<span class="e">bash: cd: No such file or directory</span>
+
 <span class="p">$</span> sudo find / -name "that-page"
 <span class="c">find: nothing here but 404s and good intentions</span>
-<span class="p">$</span> echo "there are 10 kinds of URLs: those that resolve, and this one"
-there are 10 kinds of URLs: those that resolve, and this one
-<span class="p">$</span> <span class="c"># it's not a bug — it's a feature I haven't built yet</span>
-<span class="p">$</span> _</pre>
 
-    <div class="btns c" style="margin-top:28px">
+<span class="p">$</span> echo "there are 10 kinds of URLs: those that resolve &amp; this one"
+there are 10 kinds of URLs: those that resolve &amp; this one
+
+<span class="c"># it's not a bug — it's a feature I haven't built yet</span>
+<span class="p">$</span> <span class="cur">▋</span></pre>
+    </div>
+
+    <div class="btns c" style="margin-top:26px">
       <a class="btn solid" href="index.html">▸ cd ~/home</a>
       <a class="btn" href="terminal.html">open terminal</a>
     </div>
