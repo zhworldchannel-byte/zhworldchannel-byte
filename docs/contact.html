@@ -27,6 +27,16 @@
 <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+<script>try{if(sessionStorage.getItem('zh_booted'))document.documentElement.classList.add('booted');}catch(e){}</script>
+<div id="boot" class="boot" aria-hidden="true">
+  <div class="boot-box">
+    <div class="boot-logo">&gt;_</div>
+    <div class="boot-brand">zain@hub</div>
+    <pre class="boot-log" id="bootlog"></pre>
+    <div class="boot-track"><i id="bootbar"></i></div>
+    <div class="boot-foot"><span id="bootpct">0%</span><span class="bl">secure boot ◉</span></div>
+  </div>
+</div>
 <canvas id="matrix"></canvas>
 
 <nav class="nav">

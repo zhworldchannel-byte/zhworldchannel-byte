@@ -49,6 +49,37 @@ const PAGES = [
   l.href='data:image/svg+xml,'+svg; document.head.appendChild(l);
 })();
 
+/* ---------- boot / loading screen (once per session, min ~3s) ---------- */
+(function(){
+  const boot=document.getElementById('boot'); if(!boot) return;
+  const root=document.documentElement;
+  if(root.classList.contains('booted')){ boot.remove(); return; }
+  try{ sessionStorage.setItem('zh_booted','1'); }catch(e){}
+  const log=document.getElementById('bootlog'),
+        bar=document.getElementById('bootbar'),
+        pct=document.getElementById('bootpct');
+  const lines=[
+    'BIOS ◉ zain@hub · POST check .......... ok',
+    'mounting /home/zain ................... ok',
+    'loading modules [projects · games · robotics] ... ok',
+    'initializing VaultFlow core ........... ok',
+    'establishing secure connection ........ ok',
+    'decrypting profile .................... ok',
+    'starting interface ◉'
+  ];
+  let i=0;
+  (function type(){ if(!log||i>=lines.length) return;
+    log.textContent+=(i?'\n':'')+lines[i]; i++;
+    setTimeout(type, 230+Math.random()*180); })();
+  const t0=performance.now();
+  (function prog(){ const p=Math.min(100,(performance.now()-t0)/3000*100);
+    if(bar) bar.style.width=p.toFixed(1)+'%';
+    if(pct) pct.textContent=Math.floor(p)+'%';
+    if(p<100) requestAnimationFrame(prog); })();
+  setTimeout(function(){ boot.classList.add('out');
+    setTimeout(function(){ boot.remove(); }, 520); }, 3200);
+})();
+
 /* ---------- live date + time next to the prompt (top-left, borderless) ---------- */
 (function(){
   const brand=document.querySelector('.nav .brand'); if(!brand) return;
