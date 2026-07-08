@@ -353,7 +353,7 @@ loadGitHub();
     apps:()=>'• <span class="w">VaultFlow</span> — track document expiry dates · iOS + web · secure/Google sign-in + 2FA · built with Cursor AI\n• <span class="w">Digital Delights</span> — in-school game/social/proxy hub · first business to turn a profit',
     games:()=>'• <span class="w">Crazy Stack</span> (iOS) — first App Store game · stack game · Cursor AI\n• <span class="w">Battle Arena</span> (iOS) — online PVP · Firebase backend\n• <span class="w">Arena Shooter</span> (web) — wave shooter · single HTML file\n• <span class="w">Business Dominion</span> (web) — business sim · secure backend accounts · LLM test\n→ open games.html',
     websites:()=>'• Zain\'s World (Wix) — first-ever project · blog\n• Digital Delights — game/social/proxy hub · profitable\n• Arena Shooter — browser game',
-    vaultflow:()=>'VaultFlow → <a href="https://vault-flow.space" target="_blank" style="color:var(--cyan)">vault-flow.space</a> · cloud ecosystem tracking document lifecycles &amp; subscription renewals before they expire. iOS + web, secure sign-in, Google sign-in, 2FA.',
+    vaultflow:()=>'VaultFlow → <a href="https://vault-flow.space/" target="_blank" style="color:var(--cyan)">vault-flow.space</a> · cloud ecosystem tracking document lifecycles &amp; subscription renewals before they expire. iOS + web, secure sign-in, Google sign-in, 2FA.',
     vault:()=>cmds.vaultflow(),
     ftc:()=>'FIRST Tech Challenge → multi-motor chassis control, sensor arrays &amp; Java autonomous + sponsorship, docs pipelines &amp; community outreach.',
     robotics:()=>cmds.ftc(),

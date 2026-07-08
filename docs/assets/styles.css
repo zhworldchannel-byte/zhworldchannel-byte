@@ -134,6 +134,7 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
   border-radius:6px;color:var(--muted)}
 .tag.ml{margin-left:auto}
 .tag.off{color:#ff5f56;border-color:rgba(255,95,86,.35);background:rgba(255,95,86,.08)}
+.tag.note{color:var(--cyan);border-color:rgba(34,211,238,.35);background:rgba(34,211,238,.08)}
 
 /* stat cards */
 .stat{text-align:center}
