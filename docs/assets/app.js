@@ -108,18 +108,16 @@ const PAGES = [
     setTimeout(function(){ boot.remove(); }, 520); }, 3300);
 })();
 
-/* ---------- VaultFlow release toast (home only, random + cooldown) ---------- */
+/* ---------- VaultFlow release toast (home · 1st on session start + 1 random ≥15m later) ---------- */
 (function(){
   const here=(location.pathname.split('/').pop()||'index.html')||'index.html';
   if(here!=='index.html'&&here!=='') return;
-  const KEY_LAST='zh_vf_toast_at', KEY_OFF='zh_vf_toast_off', COOLDOWN=6*60*60*1000, CHANCE=.42;
-  try{
-    if(sessionStorage.getItem(KEY_OFF)) return;
-    if(Date.now()-(+localStorage.getItem(KEY_LAST)||0)<COOLDOWN) return;
-    if(Math.random()>CHANCE) return;
-  }catch(e){}
+  const K_FIRST='zh_vf_first_at', K_SECOND_AT='zh_vf_second_at', K_SECOND_DONE='zh_vf_second_done';
+  const MIN_GAP=15*60*1000, RAND_EXTRA=30*60*1000;
+  let secondTimer=null;
 
-  function show(){
+  function mount(){
+    if(document.querySelector('.vf-toast')) return;
     const el=document.createElement('aside');
     el.className='vf-toast'; el.setAttribute('role','status'); el.setAttribute('aria-live','polite');
     el.innerHTML=`<button type="button" class="vf-toast-x" aria-label="Dismiss">×</button>
@@ -136,16 +134,50 @@ const PAGES = [
       </div>`;
     document.body.appendChild(el);
     requestAnimationFrame(()=>el.classList.add('show'));
-    try{ localStorage.setItem(KEY_LAST,String(Date.now())); }catch(e){}
-    const close=()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),320);
-      try{ sessionStorage.setItem(KEY_OFF,'1'); }catch(e){} };
+    const close=()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),320); };
     el.querySelector('.vf-toast-x')?.addEventListener('click',close);
     setTimeout(close,14000);
   }
 
+  function scheduleSecondFrom(ms){
+    if(secondTimer) clearTimeout(secondTimer);
+    if(ms<=0){ showSecond(); return; }
+    secondTimer=setTimeout(showSecond,ms);
+  }
+
+  function showSecond(){
+    try{
+      if(sessionStorage.getItem(K_SECOND_DONE)) return;
+      const at=+sessionStorage.getItem(K_SECOND_AT)||0;
+      if(!at||Date.now()<at) return;
+      mount();
+      sessionStorage.setItem(K_SECOND_DONE,'1');
+    }catch(e){}
+  }
+
+  function showFirst(){
+    try{
+      if(sessionStorage.getItem(K_FIRST)) return;
+      const now=Date.now();
+      mount();
+      sessionStorage.setItem(K_FIRST,String(now));
+      const secondAt=now+MIN_GAP+Math.random()*RAND_EXTRA;
+      sessionStorage.setItem(K_SECOND_AT,String(secondAt));
+      scheduleSecondFrom(secondAt-now);
+    }catch(e){}
+  }
+
   const boot=document.getElementById('boot');
   const delay=(boot&&!document.documentElement.classList.contains('booted'))?4000:900;
-  setTimeout(show,delay);
+
+  try{
+    if(!sessionStorage.getItem(K_FIRST)) setTimeout(showFirst,delay);
+    else if(!sessionStorage.getItem(K_SECOND_DONE)){
+      const left=(+sessionStorage.getItem(K_SECOND_AT)||0)-Date.now();
+      if(left<=0) setTimeout(showSecond,delay);
+      else scheduleSecondFrom(left);
+    }
+  }catch(e){ setTimeout(showFirst,delay); }
 })();
 
 /* ---------- live date + time next to the prompt (top-left, borderless) ---------- */
