@@ -129,8 +129,10 @@ const PAGES = [
           <div class="vf-toast-tag">latest release</div>
           <h3 class="vf-toast-title">VaultFlow</h3>
           <p class="vf-toast-sub">Never Miss An Expiration Date Again</p>
-          <a class="btn solid vf-toast-btn" href="https://vault-flow.space/" target="_blank" rel="noopener">visit vault-flow.space →</a>
         </div>
+      </div>
+      <div class="vf-toast-foot">
+        <a class="vf-toast-link" href="https://vault-flow.space/" target="_blank" rel="noopener">visit vault-flow.space →</a>
       </div>`;
     document.body.appendChild(el);
     requestAnimationFrame(()=>el.classList.add('show'));
