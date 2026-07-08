@@ -73,12 +73,23 @@ const PAGES = [
   l.href='data:image/svg+xml,'+svg; document.head.appendChild(l);
 })();
 
-/* ---------- boot / loading screen (once per session, min ~3s) ---------- */
+/* ---------- boot / loading screen (first open + reload only) ---------- */
 (function(){
   const boot=document.getElementById('boot'); if(!boot) return;
   const root=document.documentElement;
-  if(root.classList.contains('booted')){ boot.remove(); return; }
-  try{ sessionStorage.setItem('zh_booted','1'); }catch(e){}
+  let reload=false, visited=false;
+  try{
+    const n=performance.getEntriesByType('navigation')[0];
+    reload=n&&n.type==='reload';
+    visited=!!sessionStorage.getItem('zh_session_active');
+  }catch(e){}
+  const showBoot=reload||!visited;
+  try{ if(!visited) sessionStorage.setItem('zh_session_active','1'); }catch(e){}
+  if(!showBoot||root.classList.contains('booted')){
+    root.classList.add('booted');
+    boot.remove();
+    return;
+  }
   const steps=document.getElementById('bootsteps'),
         bar=document.getElementById('bootbar'),
         pct=document.getElementById('bootpct');
