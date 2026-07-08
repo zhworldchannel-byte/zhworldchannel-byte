@@ -198,6 +198,34 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .btn.solid:hover{color:#010409;background:#4be066}
 .cico{width:16px;height:16px;fill:currentColor;flex:0 0 auto}
 
+/* expandable project details (VaultFlow origin story) */
+.proj-more-hint{font-size:13px;color:var(--muted);margin:4px 0 14px}
+.proj-more-hint .cmt{color:var(--cyan);margin-right:6px}
+.proj-more-hint b{color:var(--green);font-weight:600}
+.vf-btns{align-items:flex-start}
+.proj-details{display:inline-block;flex:1 1 auto}
+.proj-details[open]{flex:1 1 100%;width:100%}
+.proj-details-btn{list-style:none}
+.proj-details summary{list-style:none}
+.proj-details summary::-webkit-details-marker{display:none}
+.proj-details .chev{display:inline-block;transition:transform .25s ease;font-size:12px;opacity:.85}
+.proj-details[open] .chev{transform:rotate(180deg)}
+.proj-details[open] .proj-details-btn{border-color:var(--green);color:var(--green)}
+.proj-detail-body{margin-top:14px;padding:16px 18px;width:100%;background:rgba(0,0,0,.28);
+  border:1px solid var(--line);border-radius:12px;animation:projDetailIn .35s ease}
+.proj-detail-label{font-size:11px;letter-spacing:2px;color:var(--cyan);margin-bottom:12px}
+.proj-detail-body p{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 12px}
+.proj-detail-body p:last-child{margin-bottom:0}
+@keyframes projDetailIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* VaultFlow social icon links */
+.vf-socials{display:flex;gap:6px;align-items:center;margin:-2px 0 12px}
+.vf-soc{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;
+  border:1px solid rgba(57,211,83,.1);background:transparent;color:var(--muted);
+  text-decoration:none;transition:color .2s,border-color .2s,background .2s,transform .2s}
+.vf-soc svg{width:14px;height:14px;fill:currentColor}
+.vf-soc:hover{color:var(--green);border-color:rgba(57,211,83,.32);background:rgba(57,211,83,.06);transform:translateY(-1px)}
+
 /* chips */
 .chips{display:flex;flex-wrap:wrap;gap:9px}
 .chip{background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:7px 15px;
