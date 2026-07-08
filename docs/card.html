@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Digital Dev Card · Zain Hamid</title>
-<meta name="description" content="Digital developer card for Zain Hamid — download or share contact details." />
+<meta name="description" content="Digital developer card for Zain Hamid — share your contact details." />
 <meta name="author" content="Zain Hamid" />
 <meta name="theme-color" content="#010409" />
 <link rel="canonical" href="https://zhworldchannel-byte.github.io/zhworldchannel-byte/card.html" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Zain Hamid · ~/hub" />
 <meta property="og:title" content="Digital Developer Card · Zain Hamid" />
-<meta property="og:description" content="Downloadable digital developer card with contact info." />
+<meta property="og:description" content="Shareable digital developer card with contact info." />
 <meta property="og:url" content="https://zhworldchannel-byte.github.io/zhworldchannel-byte/card.html" />
 <meta property="og:image" content="https://zhworldchannel-byte.github.io/zhworldchannel-byte/og-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,14 +46,12 @@
   <section class="hero reveal" style="padding-top:40px">
     <div class="prompt"><b>root@zainhamid</b>:~# ./issue_id.sh</div>
     <h1 style="font-size:clamp(30px,5.5vw,58px)">Digital Developer Card</h1>
-    <div class="role">Hover to tilt · click any field to copy · download below</div>
+    <div class="role">Hover to tilt · click any field to copy · share below</div>
   </section>
 
   <div class="card-tools reveal">
     <div class="btns c">
-      <button class="btn solid" type="button" id="dlCard">▸ download PNG</button>
-      <button class="btn" type="button" id="copyAll">copy all contact</button>
-      <button class="btn" type="button" id="shareCard" hidden>share</button>
+      <button class="btn solid" type="button" id="shareCard">▸ share card</button>
     </div>
   </div>
 
@@ -114,30 +112,6 @@
 
   <footer class="site-footer"></footer>
 </div>
-
-<!-- fixed-layout business card for download only -->
-<div class="biz-export-root" id="bizExportRoot" aria-hidden="true">
-  <article class="biz-card" id="bizCard">
-    <div class="biz-stripe"></div>
-    <div class="biz-photo">
-      <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
-        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'biz-photo-fallback',textContent:'ZH'}))" />
-    </div>
-    <div class="biz-main">
-      <h2 class="biz-name">Zain Hamid</h2>
-      <span class="biz-opp"><span class="biz-dot"></span>open to opportunities</span>
-      <p class="biz-line biz-cyan">Founder &amp; CEO @ VaultFlow</p>
-      <p class="biz-line biz-muted">Full-Stack Developer</p>
-      <div class="biz-divider"></div>
-      <div class="biz-contact">
-        <p>+1 425-364-0252</p>
-        <p>zhworldchannel@gmail.com</p>
-        <p>zainhamidzia@gmail.com</p>
-      </div>
-    </div>
-  </article>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="assets/app.js"></script>
 <script>
 (function(){
@@ -173,8 +147,6 @@ Open to opportunities`;
     });
   });
 
-  document.getElementById('copyAll')?.addEventListener('click',()=>copyText(CONTACT,'Contact info'));
-
   if(shell&&card&&matchMedia('(hover:hover)').matches){
     shell.addEventListener('mousemove',e=>{
       const r=card.getBoundingClientRect();
@@ -185,34 +157,13 @@ Open to opportunities`;
     shell.addEventListener('mouseleave',()=>{ card.style.transform=''; });
   }
 
-  document.getElementById('dlCard')?.addEventListener('click',async()=>{
-    const btn=document.getElementById('dlCard');
-    const bizCard=document.getElementById('bizCard');
-    if(!bizCard||typeof html2canvas!=='function') return;
-    btn.disabled=true; btn.textContent='rendering…';
-    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
-    try{
-      const canvas=await html2canvas(bizCard,{
-        width:1050,height:600,scale:3,backgroundColor:'#010409',useCORS:true,logging:false
-      });
-      const a=document.createElement('a');
-      a.download='zain-hamid-business-card.png';
-      a.href=canvas.toDataURL('image/png');
-      a.click();
-      showToast('Card downloaded ✓');
-    }catch(e){ showToast('Download failed — try again'); }
-    btn.disabled=false; btn.textContent='▸ download PNG';
+  document.getElementById('shareCard')?.addEventListener('click',async()=>{
+    const payload={title:'Zain Hamid — Digital Developer Card',text:CONTACT,url:location.href};
+    if(navigator.share){
+      try{ await navigator.share(payload); return; }catch(e){ if(e.name==='AbortError') return; }
+    }
+    await copyText(CONTACT+'\n'+location.href,'Card info');
   });
-
-  const shareBtn=document.getElementById('shareCard');
-  if(shareBtn&&navigator.share){
-    shareBtn.hidden=false;
-    shareBtn.addEventListener('click',async()=>{
-      try{
-        await navigator.share({title:'Zain Hamid — Digital Developer Card',text:CONTACT,url:location.href});
-      }catch(e){}
-    });
-  }
 })();
 </script>
 </body>

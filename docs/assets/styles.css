@@ -355,32 +355,6 @@ footer.site-footer{margin-top:64px;padding:32px 0 24px;border-top:1px solid rgba
   .id-socials{justify-content:center}
 }
 
-/* business card export — 3.5" × 2" @ 300dpi (1050×600) */
-.biz-export-root{position:fixed;left:-12000px;top:0;z-index:-1;width:1050px;height:600px;overflow:hidden}
-.biz-card{width:1050px;height:600px;box-sizing:border-box;
-  display:grid;grid-template-columns:14px 204px 1fr;align-items:center;column-gap:36px;
-  padding:0 44px 0 0;overflow:hidden;border-radius:16px;border:2px solid rgba(57,211,83,.28);
-  background:linear-gradient(140deg,#0c1016 0%,#010409 55%,#06120b 100%);
-  font-family:'JetBrains Mono',monospace}
-.biz-stripe{align-self:stretch;width:14px;background:linear-gradient(180deg,#39d353,#22c55e 50%,#39d353)}
-.biz-photo{width:204px;height:272px;border-radius:14px;overflow:hidden;justify-self:center;
-  border:2px solid rgba(57,211,83,.35);box-shadow:0 0 20px rgba(57,211,83,.1);background:#0d1117}
-.biz-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
-.biz-photo-fallback{width:100%;height:100%;display:grid;place-items:center;font-size:60px;font-weight:800;color:#39d353}
-.biz-main{display:flex;flex-direction:column;justify-content:center;min-width:0;height:100%;padding:44px 0}
-.biz-name{margin:0 0 14px;font-size:52px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.5px}
-.biz-opp{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
-  font-size:13px;font-weight:700;color:#39d353;margin:0 0 18px;
-  padding:6px 14px;border-radius:999px;border:1px solid rgba(57,211,83,.35);background:rgba(57,211,83,.1)}
-.biz-dot{width:8px;height:8px;border-radius:50%;background:#39d353;flex-shrink:0}
-.biz-line{margin:0;line-height:1.35;white-space:nowrap}
-.biz-cyan{color:#22d3ee;font-size:18px;margin-bottom:6px}
-.biz-muted{color:#8b949e;font-size:16px;margin-bottom:18px}
-.biz-divider{width:100%;max-width:420px;height:1px;margin-bottom:16px;
-  background:linear-gradient(90deg,rgba(57,211,83,.45),rgba(57,211,83,.08))}
-.biz-contact{display:flex;flex-direction:column;gap:11px;padding-left:2px}
-.biz-contact p{margin:0;font-size:17px;color:#e6edf3;line-height:1.25;white-space:nowrap}
-
 /* wave */
 .wave{width:100%;display:block}
 
