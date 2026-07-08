@@ -108,11 +108,11 @@ const PAGES = [
     setTimeout(function(){ boot.remove(); }, 520); }, 3300);
 })();
 
-/* ---------- VaultFlow release toast (home · 1st on session start + 1 random ≥15m later) ---------- */
+/* ---------- VaultFlow release toast (session start + 1 random ≥15m later · persists until dismissed) ---------- */
 (function(){
   const here=(location.pathname.split('/').pop()||'index.html')||'index.html';
-  if(here!=='index.html'&&here!=='') return;
-  const K_FIRST='zh_vf_first_at', K_SECOND_AT='zh_vf_second_at', K_SECOND_DONE='zh_vf_second_done';
+  const isHome=here==='index.html'||here==='';
+  const K_FIRST='zh_vf_first_at', K_SECOND_AT='zh_vf_second_at', K_SECOND_DONE='zh_vf_second_done', K_PENDING='zh_vf_toast_pending';
   const MIN_GAP=15*60*1000, RAND_EXTRA=30*60*1000;
   let secondTimer=null;
 
@@ -134,9 +134,13 @@ const PAGES = [
       </div>`;
     document.body.appendChild(el);
     requestAnimationFrame(()=>el.classList.add('show'));
-    const close=()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),320); };
+    const close=()=>{
+      el.classList.remove('show');
+      setTimeout(()=>el.remove(),320);
+      try{ sessionStorage.removeItem(K_PENDING); }catch(e){}
+    };
     el.querySelector('.vf-toast-x')?.addEventListener('click',close);
-    setTimeout(close,14000);
+    try{ sessionStorage.setItem(K_PENDING,'1'); }catch(e){}
   }
 
   function scheduleSecondFrom(ms){
@@ -168,16 +172,19 @@ const PAGES = [
   }
 
   const boot=document.getElementById('boot');
-  const delay=(boot&&!document.documentElement.classList.contains('booted'))?4000:900;
+  const delay=(boot&&!document.documentElement.classList.contains('booted')&&isHome)?4000:120;
 
   try{
-    if(!sessionStorage.getItem(K_FIRST)) setTimeout(showFirst,delay);
+    if(sessionStorage.getItem(K_PENDING)) setTimeout(mount,delay);
+    if(isHome&&!sessionStorage.getItem(K_FIRST)) setTimeout(showFirst,delay);
     else if(!sessionStorage.getItem(K_SECOND_DONE)){
       const left=(+sessionStorage.getItem(K_SECOND_AT)||0)-Date.now();
-      if(left<=0) setTimeout(showSecond,delay);
-      else scheduleSecondFrom(left);
+      if(sessionStorage.getItem(K_FIRST)){
+        if(left<=0) setTimeout(showSecond,delay);
+        else scheduleSecondFrom(left);
+      }
     }
-  }catch(e){ setTimeout(showFirst,delay); }
+  }catch(e){ if(isHome) setTimeout(showFirst,delay); }
 })();
 
 /* ---------- live date + time next to the prompt (top-left, borderless) ---------- */
