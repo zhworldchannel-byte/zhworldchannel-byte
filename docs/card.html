@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Card · Zain Hamid</title>
+<meta name="description" content="Digital ID card for Zain Hamid — download or share contact details." />
+<meta name="author" content="Zain Hamid" />
+<meta name="theme-color" content="#010409" />
+<link rel="canonical" href="https://zhworldchannel-byte.github.io/zhworldchannel-byte/card.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Zain Hamid · ~/hub" />
+<meta property="og:title" content="Digital ID Card · Zain Hamid" />
+<meta property="og:description" content="Downloadable developer ID card with contact info." />
+<meta property="og:url" content="https://zhworldchannel-byte.github.io/zhworldchannel-byte/card.html" />
+<meta property="og:image" content="https://zhworldchannel-byte.github.io/zhworldchannel-byte/og-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<script>try{if(sessionStorage.getItem('zh_booted'))document.documentElement.classList.add('booted');}catch(e){}</script>
+<div id="boot" class="boot" aria-hidden="true">
+  <div class="win">
+    <div class="win-head"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="tt">zain@hub — boot.sh</span></div>
+    <div class="win-body">
+      <div class="boot-id"><div class="glyph">&gt;_</div><div class="idm"><b>Zain Hamid</b><span>booting ~/hub environment</span></div></div>
+      <div class="boot-steps" id="bootsteps"></div>
+      <div class="boot-prog"><div class="track"><i id="bootbar"></i></div><span class="pct" id="bootpct">0%</span></div>
+    </div>
+  </div>
+</div>
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="brand"><span class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+    <span><b>root@zainhamid</b>:~/card</span></div>
+  <div class="links"></div>
+  <span class="opp"><i class="pulse"></i>open to opportunities</span>
+  <button class="burger" aria-label="menu">≡</button>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero reveal" style="padding-top:40px">
+    <div class="prompt"><b>root@zainhamid</b>:~# ./issue_id.sh</div>
+    <h1 style="font-size:clamp(34px,6vw,64px)">Digital ID Card</h1>
+    <div class="role">Download or share a contact card with your details.</div>
+  </section>
+
+  <div class="card-tools reveal">
+    <label class="card-toggle">
+      <input type="checkbox" id="showOpp" checked />
+      <span>Show <b>open to opportunities</b> on card</span>
+    </label>
+    <div class="btns c">
+      <button class="btn solid" type="button" id="dlCard">▸ download PNG</button>
+      <button class="btn" type="button" id="printCard">print card</button>
+    </div>
+  </div>
+
+  <div class="card-stage reveal">
+    <article class="id-card" id="idCard" aria-label="Zain Hamid digital ID card">
+      <div class="id-top">
+        <span class="id-dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></span>
+        <span class="id-label">developer.id · zainhamid</span>
+        <span class="id-chip">ID</span>
+      </div>
+      <div class="id-body">
+        <div class="id-photo">
+          <img src="assets/zain.jpg" alt="" crossorigin="anonymous"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'id-fallback',textContent:'ZH'}))" />
+        </div>
+        <div class="id-info">
+          <div class="id-name">Zain Hamid</div>
+          <div class="id-role">Founder &amp; CEO @ VaultFlow</div>
+          <ul class="id-lines">
+            <li><span class="id-k">phone</span><span class="id-v">+1 425-364-0252</span></li>
+            <li><span class="id-k">email</span><span class="id-v">zhworldchannel@gmail.com</span></li>
+            <li><span class="id-k">alt</span><span class="id-v">zainhamidzia@gmail.com</span></li>
+          </ul>
+          <div class="id-opp" id="idOpp"><i class="pulse"></i> open to opportunities</div>
+        </div>
+      </div>
+      <div class="id-foot">zhworldchannel-byte.github.io/zhworldchannel-byte</div>
+    </article>
+  </div>
+
+  <footer class="site-footer"></footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="assets/app.js"></script>
+<script>
+(function(){
+  const opp=document.getElementById('showOpp');
+  const badge=document.getElementById('idOpp');
+  const card=document.getElementById('idCard');
+  if(opp&&badge) opp.addEventListener('change',()=>{
+    badge.style.display=opp.checked?'inline-flex':'none';
+  });
+  document.getElementById('printCard')?.addEventListener('click',()=>window.print());
+  document.getElementById('dlCard')?.addEventListener('click',async()=>{
+    const btn=document.getElementById('dlCard');
+    if(!card||typeof html2canvas!=='function') return;
+    btn.disabled=true; btn.textContent='rendering…';
+    try{
+      const canvas=await html2canvas(card,{scale:3,backgroundColor:'#010409',useCORS:true,logging:false});
+      const a=document.createElement('a');
+      a.download='zain-hamid-id-card.png';
+      a.href=canvas.toDataURL('image/png');
+      a.click();
+    }catch(e){ alert('Could not generate image. Try print instead.'); }
+    btn.disabled=false; btn.textContent='▸ download PNG';
+  });
+})();
+</script>
+</body>
+</html>
