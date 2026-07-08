@@ -42,6 +42,29 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .reveal.in{opacity:1;transform:none}
 .center{text-align:center}
 
+/* vaultflow home toast */
+.vf-toast{position:fixed;top:72px;left:18px;z-index:55;width:min(360px,calc(100vw - 36px));
+  border-radius:14px;border:1px solid rgba(57,211,83,.28);background:linear-gradient(145deg,#0d1218,#010409);
+  box-shadow:0 16px 48px rgba(0,0,0,.5),0 0 32px rgba(57,211,83,.08);
+  opacity:0;transform:translateX(-18px) translateY(-6px);transition:opacity .35s,transform .35s;pointer-events:none}
+.vf-toast.show{opacity:1;transform:none;pointer-events:auto}
+.vf-toast-x{position:absolute;top:8px;right:10px;width:28px;height:28px;border:none;border-radius:8px;
+  background:transparent;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;transition:color .2s,background .2s}
+.vf-toast-x:hover{color:#fff;background:rgba(57,211,83,.1)}
+.vf-toast-inner{display:flex;gap:14px;padding:16px 40px 16px 16px;align-items:flex-start}
+.vf-toast-logo{width:52px;height:52px;border-radius:12px;flex-shrink:0;border:1px solid rgba(57,211,83,.25);
+  box-shadow:0 0 16px rgba(57,211,83,.12);object-fit:cover}
+.vf-toast-body{min-width:0;display:flex;flex-direction:column;gap:6px}
+.vf-toast-tag{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--green)}
+.vf-toast-title{margin:0;font-size:18px;font-weight:800;color:#fff;line-height:1.1}
+.vf-toast-sub{margin:0;font-size:12px;color:var(--muted);line-height:1.4}
+.vf-toast-btn{margin-top:4px;align-self:flex-start;font-size:12px;padding:8px 12px}
+@media(max-width:720px){
+  .vf-toast{top:64px;left:12px;width:min(340px,calc(100vw - 24px))}
+  .vf-toast-logo{width:44px;height:44px}
+  .vf-toast-title{font-size:16px}
+}
+
 /* ── nav ── */
 .nav{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;
   align-items:center;gap:12px;padding:10px 18px;background:rgba(1,4,9,.82);backdrop-filter:blur(12px);

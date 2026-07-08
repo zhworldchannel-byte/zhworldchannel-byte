@@ -108,6 +108,44 @@ const PAGES = [
     setTimeout(function(){ boot.remove(); }, 520); }, 3300);
 })();
 
+/* ---------- VaultFlow release toast (home only, random + cooldown) ---------- */
+(function(){
+  const here=(location.pathname.split('/').pop()||'index.html')||'index.html';
+  if(here!=='index.html'&&here!=='') return;
+  const KEY_LAST='zh_vf_toast_at', KEY_OFF='zh_vf_toast_off', COOLDOWN=6*60*60*1000, CHANCE=.42;
+  try{
+    if(sessionStorage.getItem(KEY_OFF)) return;
+    if(Date.now()-(+localStorage.getItem(KEY_LAST)||0)<COOLDOWN) return;
+    if(Math.random()>CHANCE) return;
+  }catch(e){}
+
+  function show(){
+    const el=document.createElement('aside');
+    el.className='vf-toast'; el.setAttribute('role','status'); el.setAttribute('aria-live','polite');
+    el.innerHTML=`<button type="button" class="vf-toast-x" aria-label="Dismiss">×</button>
+      <div class="vf-toast-inner">
+        <img class="vf-toast-logo" src="vaultflow-icon-square.png" alt="" onerror="this.style.display='none'" />
+        <div class="vf-toast-body">
+          <div class="vf-toast-tag">latest release</div>
+          <h3 class="vf-toast-title">VaultFlow</h3>
+          <p class="vf-toast-sub">Never Miss An Expiration Date Again</p>
+          <a class="btn solid vf-toast-btn" href="https://vault-flow.space/" target="_blank" rel="noopener">visit vault-flow.space →</a>
+        </div>
+      </div>`;
+    document.body.appendChild(el);
+    requestAnimationFrame(()=>el.classList.add('show'));
+    try{ localStorage.setItem(KEY_LAST,String(Date.now())); }catch(e){}
+    const close=()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),320);
+      try{ sessionStorage.setItem(KEY_OFF,'1'); }catch(e){} };
+    el.querySelector('.vf-toast-x')?.addEventListener('click',close);
+    setTimeout(close,14000);
+  }
+
+  const boot=document.getElementById('boot');
+  const delay=(boot&&!document.documentElement.classList.contains('booted'))?4000:900;
+  setTimeout(show,delay);
+})();
+
 /* ---------- live date + time next to the prompt (top-left, borderless) ---------- */
 (function(){
   const brand=document.querySelector('.nav .brand'); if(!brand) return;
