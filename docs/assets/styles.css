@@ -341,6 +341,27 @@ footer.site-footer{margin-top:64px;padding:32px 0 24px;border-top:1px solid rgba
   padding:11px 18px 13px;border-top:1px solid rgba(57,211,83,.1);
   font-size:10px;color:var(--muted);letter-spacing:.25px;background:rgba(0,0,0,.25)}
 .id-foot-sep{color:rgba(57,211,83,.25)}
+.id-card.id-export{
+  width:820px;max-width:none;border-radius:14px;
+  box-shadow:0 0 0 1px rgba(57,211,83,.2);
+  background:linear-gradient(160deg,#0c1016,#010409 50%,#06120b)}
+.id-card.id-export .id-digital-only{display:none!important}
+.id-card.id-export .id-opp-strip{
+  padding:11px 20px;font-size:11px;border-bottom:1px solid rgba(57,211,83,.14);
+  background:linear-gradient(90deg,rgba(57,211,83,.06),rgba(57,211,83,.14),rgba(57,211,83,.06))}
+.id-card.id-export .id-opp-strip .pulse{animation:none;opacity:1}
+.id-card.id-export .id-body{
+  grid-template-columns:170px 1fr;gap:20px;padding:20px 22px 22px}
+.id-card.id-export .id-photo{width:150px;border-radius:12px}
+.id-card.id-export .id-name{font-size:30px}
+.id-card.id-export .id-role{font-size:12px}
+.id-card.id-export .id-fields{gap:0;margin-top:6px}
+.id-card.id-export .id-field{
+  grid-template-columns:50px 1fr;gap:8px;padding:9px 0;
+  border:none;border-radius:0;border-bottom:1px solid rgba(57,211,83,.09);
+  background:transparent;cursor:default;transform:none!important}
+.id-card.id-export .id-field:last-child{border-bottom:none}
+.id-card.id-export .id-v{font-size:12px;color:#e6edf3}
 .card-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(12px);
   padding:10px 16px;border-radius:10px;background:#0d1117;border:1px solid rgba(57,211,83,.35);
   color:var(--green);font-size:13px;font-weight:600;opacity:0;pointer-events:none;
@@ -357,9 +378,13 @@ footer.site-footer{margin-top:64px;padding:32px 0 24px;border-top:1px solid rgba
 @media print{
   body *{visibility:hidden}
   .card-shell,.card-shell *{visibility:visible}
-  .card-shell{position:fixed;inset:0;display:grid;place-items:center;background:#010409}
+  .card-shell{position:fixed;inset:0;display:grid;place-items:center;background:#fff}
   .card-glow,.nav,#boot,#matrix,.card-tools,.card-toast,footer,.hero,.totop{display:none!important}
-  .id-card{transform:none!important;box-shadow:none}
+  .id-card,.id-card.id-export{transform:none!important;box-shadow:none;width:3.5in;max-width:3.5in;
+    border:1px solid #ccc;border-radius:10px;background:#010409!important}
+  .id-digital-only{display:none!important}
+  .id-card .id-field{grid-template-columns:50px 1fr}
+  .id-copy-hint,.id-socials,.id-top,.id-foot{display:none!important}
 }
 
 /* wave */
