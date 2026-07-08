@@ -149,6 +149,7 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .btn:hover{border-color:var(--green);color:var(--green);transform:translateY(-3px);box-shadow:var(--glow)}
 .btn.solid{background:var(--green);color:#010409;border-color:var(--green);font-weight:700}
 .btn.solid:hover{color:#010409;background:#4be066}
+.cico{width:16px;height:16px;fill:currentColor;flex:0 0 auto}
 
 /* chips */
 .chips{display:flex;flex-wrap:wrap;gap:9px}
