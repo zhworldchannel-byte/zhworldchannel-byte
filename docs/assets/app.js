@@ -15,7 +15,8 @@ const PAGES = [
   if(links) links.innerHTML=PAGES.map(([h,l])=>
     `<a href="${h}"${(h===here||(here===''&&h==='index.html'))?' class="active"':''}>${l}</a>`).join('');
   const fnav=document.querySelector('footer .fnav');
-  if(fnav) fnav.innerHTML=PAGES.map(([h,l])=>`<a href="${h}">${l}</a>`).join('');
+  if(fnav) fnav.innerHTML=PAGES.map(([h,l])=>
+    `<a href="${h}"${(h===here||(here===''&&h==='index.html'))?' class="active"':''}>${l}</a>`).join('');
 })();
 
 /* ---------- matrix rain ---------- */
@@ -39,7 +40,7 @@ const PAGES = [
 (function(){
   const b=document.querySelector('.nav .burger'), l=document.querySelector('.nav .links');
   if(b&&l) b.addEventListener('click',()=>l.classList.toggle('open'));
-  document.querySelectorAll('#yr').forEach(e=>e.textContent=new Date().getFullYear());
+  document.querySelectorAll('footer .yr').forEach(e=>e.textContent=new Date().getFullYear());
 })();
 
 /* ---------- favicon (terminal '>' glyph, injected everywhere) ---------- */
