@@ -133,6 +133,7 @@ body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
 .tag{font-size:10px;background:var(--panel2);border:1px solid var(--line);padding:3px 9px;
   border-radius:6px;color:var(--muted)}
 .tag.ml{margin-left:auto}
+.tag.off{color:#ff5f56;border-color:rgba(255,95,86,.35);background:rgba(255,95,86,.08)}
 
 /* stat cards */
 .stat{text-align:center}
