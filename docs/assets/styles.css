@@ -275,6 +275,16 @@ footer.site-footer{margin-top:64px;padding:32px 0 24px;border-top:1px solid rgba
   border-radius:7px;transition:color .2s,background .2s}
 .foot-inner .fnav a:hover{color:var(--green);background:rgba(57,211,83,.08)}
 .foot-inner .fnav a.active{color:var(--green);background:rgba(57,211,83,.1);box-shadow:inset 0 0 0 1px var(--line)}
+.foot-social{display:flex;gap:8px;align-items:center;justify-content:center}
+.foot-soc{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;
+  border:1px solid rgba(57,211,83,.12);background:rgba(13,17,23,.4);color:var(--muted);
+  text-decoration:none;transition:color .2s,border-color .2s,background .2s,transform .2s}
+.foot-soc svg{width:16px;height:16px;fill:currentColor}
+.foot-soc:hover{color:var(--green);border-color:rgba(57,211,83,.35);background:rgba(57,211,83,.08);transform:translateY(-1px)}
+.foot-contact{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:center;font-size:12px}
+.foot-contact a{color:var(--muted);text-decoration:none;transition:color .2s}
+.foot-contact a:hover{color:var(--cyan)}
+.foot-sep{color:rgba(57,211,83,.25);user-select:none}
 .foot-copy{text-align:center;color:var(--muted);font-size:11px;margin-top:16px;letter-spacing:.2px}
 
 /* wave */
