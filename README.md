@@ -75,6 +75,7 @@ I'm **Zain Hamid** — a **Founder / App Developer / Software Engineer** shippin
 
 <a href="https://www.linkedin.com/in/zain-hamid-390523393/"><img src="https://img.shields.io/badge/LinkedIn-connect-39d353?style=for-the-badge&logo=linkedin&logoColor=39d353&labelColor=010409" alt="linkedin" /></a>
 <a href="https://www.instagram.com/zainy_2012/"><img src="https://img.shields.io/badge/Instagram-follow-39d353?style=for-the-badge&logo=instagram&logoColor=39d353&labelColor=010409" alt="instagram" /></a>
+<a href="https://devpost.com/zainhamidzia"><img src="https://img.shields.io/badge/Devpost-profile-39d353?style=for-the-badge&logo=devpost&logoColor=39d353&labelColor=010409" alt="devpost" /></a>
 <a href="mailto:zhworldchannel@gmail.com"><img src="https://img.shields.io/badge/Email-message-39d353?style=for-the-badge&logo=gmail&logoColor=39d353&labelColor=010409" alt="email" /></a>
 <a href="https://vault-flow.space"><img src="https://img.shields.io/badge/VaultFlow-launch-39d353?style=for-the-badge&logo=icloud&logoColor=39d353&labelColor=010409" alt="vaultflow" /></a>
 
